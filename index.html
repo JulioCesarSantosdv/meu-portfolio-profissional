@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+<html lang="pt-BR">
+<!-- Define o idioma do documento como Português do Brasil para melhor acessibilidade e SEO -->
+<head>
+    <!-- Define a codificação de caracteres para UTF-8, garantindo a exibição correta de caracteres especiais -->
+    <meta charset="UTF-8" />
+    <!-- Define o ícone da aba do navegador (favicon) -->
+    <link rel="icon" type="image/png" href="assets/img/corporate1.jpg">
+    <!-- Configura a viewport para garantir que o site seja responsivo em diferentes dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Fontes Google -->
+    <!-- Pré-conecta a domínios de fontes do Google para otimizar o carregamento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Importa as fontes 'Roboto Mono' e 'Mina' do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&family=Mina:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Ícones -->
+    <!-- Importa a biblioteca Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Vendor CSS Files -->
+    <!-- Importa o arquivo CSS de animações (Animate.css) -->
+    <link href="assets/vendor/animate.min.css" rel="stylesheet">
+    
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Julio Cesar |  IT Support Analyst</title>
+
+ <!-- Main CSS File -->
+  <!-- Importa o arquivo CSS principal da aplicação -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar Fixa no Topo com Botão de Tema -->
+    <!-- Seção da barra de navegação superior -->
+    <nav class="top-navbar">
+      <!-- Contêiner para os botões de navegação -->
+      <div class="top-nav-menu">
+        <!-- Botões de navegação que levam a diferentes seções da página -->
+        <button class="top-nav-btn" data-section="about-section">Sobre Mim</button>
+        <button class="top-nav-btn" data-section="experience-section">Experiência</button>
+        <button class="top-nav-btn" data-section="certifications-section">Certificações</button>
+        <button class="top-nav-btn" data-section="skills-section">Habilidades</button>
+        <button class="top-nav-btn" data-section="projects-section">Projetos</button>
+        <button class="top-nav-btn" data-section="contact-section">Contato</button>
+      </div>
+      <!-- Contêiner para o botão de alternância de tema (claro/escuro) -->
+      <div class="theme-toggle-container">
+        <!-- Botão de alternância de tema com ícones SVG para sol e lua -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="theme-icon sun hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <!-- Cabeçalho principal da página com animação de rolagem -->
+          <header class="animate-on-scroll">
+            <!-- Seletor de idioma -->
+            <div class="language-switcher">
+              <!-- Botões para alternar entre os idiomas (Português, Inglês, Espanhol) -->
+              <button class="language-btn active" data-lang="pt">PT</button>
+              <button class="language-btn" data-lang="en">EN</button>
+              <button class="language-btn" data-lang="es">ES</button>
+            </div>
+            
+            <!-- Título principal com o nome do profissional -->
+            <h1 id="name">Julio Cesar Santos da Silva</h1>
+            <!-- Subtítulo com a função/cargo -->
+            <p class="subtitle" id="job-title">Analista de Dados Júnior | Graduado em Sistemas de Informação</p>
+            
+            <!-- Links de contato e redes sociais -->
+            <div class="contact-links">
+              <!-- Link para o perfil do LinkedIn -->
+              <a href="https://www.linkedin.com/in/juliocesarsantos/" target="_blank">
+                <i class="fab fa-linkedin"></i> <span id="linkedin-label">LinkedIn</span>
+              </a>
+              <!-- Link para o perfil do GitHub -->
+              <a href="https://github.com/JulioCesarSantosdv" target="_blank">
+                <i class="fab fa-github"></i> <span id="github-label">GitHub</span>
+              </a>
+              <!-- Link para enviar e-mail -->
+              <!--<a href="mailto:jc-santos-2@hotmail.com">
+                <i class="fas fa-envelope"></i> <span id="email-label">E-mail</span>
+              </a>-->
+              <!-- Link para baixar o currículo (CV) -->
+              <!--<a href="path/to/your-cv.pdf" download>
+                <i class="fas fa-download"></i> <span id="cv-label">Baixar CV</span>
+              </a>-->
+            </div>
+          </header>
+              
+          <!-- Seção de "Sobre Mim" com animação de rolagem -->
+          <section id="about-section" class="about-section animate-on-scroll">
+            <div>
+              <!-- Título da seção "Sobre Mim" -->
+              <h2 id="about-title">Sobre Mim</h2>
+              <!-- Conteúdo textual controlado dinamicamente via functions.js (suporte a múltiplos idiomas) -->
+              <p id="about-text-1"></p>
+              
+              <p id="about-text-2"></p>
+              
+              <p id="about-text-3"></p>
+
+              <p id="about-text-4"></p>
+            </div>
+            
+            <!-- Contêiner para a imagem de perfil centralizada -->
+            <div style="text-align: center;">
+              <!-- Imagem de perfil do profissional -->
+              <img src="assets/img/profile_juliocesar.jpg" alt="Julio Cesar" class="profile-img">
+            </div>
+          </section>
+          
+          <!-- Nova Seção de Experiência com animação de rolagem -->
+          <section id="experience-section" class="animate-on-scroll">
+            <!-- Título da seção "Experiência Profissional" -->
+            <h2 id="experience-title">Experiência Profissional</h2>
+            <!-- Contêiner para os cartões de experiência -->
+            <div class="experience-container">
+              <!-- Cartão de experiência individual -->
+              <div class="experience-card">
+                <!-- Título do cargo -->
+                <h3 id="exp1-title"></h3>
+                <!-- Período da experiência -->
+                <div class="experience-date" id="exp1-date"></div>
+                <!-- Nome da empresa -->
+                <div id="exp1-company"></div>
+                <!-- Descrição das responsabilidades e conquistas -->
+                <div class="experience-description" id="exp1-desc">
+                  <p></p>
+                </div>
+              </div>
+              
+              <!-- Segundo cartão de experiência individual -->
+              <div class="experience-card">
+                <h3 id="exp2-title"></h3>
+                <div class="experience-date" id="exp2-date"></div>
+                <div id="exp2-company"></div>
+                <div class="experience-description" id="exp2-desc">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Nova Seção de Certificações com animação de rolagem -->
+          <section id="certifications-section" class="animate-on-scroll">
+            <!-- Título da seção "Certificações" -->
+            <h2 id="certifications-title">Certificações</h2>
+            <!-- Contêiner para os cartões de certificação -->
+            <div class="certifications-container">
+              <!-- Cartão de certificação individual -->
+              <div class="certification-card">
+                <!-- Imagem da certificação -->
+                <img src="assets/img/corporate2.jpg" alt="Certificação em Análise de Dados">
+               <!-- Conteúdo textual controlado dinamicamente via functions.js (suporte a múltiplos idiomas) -->
+                <h3 id="cert1-title"></h3>
+                <div id="cert1-org"></div>
+                <!-- Links relacionados à certificação (ex: credencial) -->
+                <div class="certification-links">
+                  <a href="https://learn.microsoft.com/pt-br/users/juliocesarsantos-2251/credentials/bf4da56dacd79921" target="_blank"><i class="fas fa-external-link-alt"></i> <span id="credential-label">Credencial</span></a>
+                </div>
+              </div>
+              
+              <!-- Segundo cartão de certificação individual -->
+              <div class="certification-card">
+                <img src="assets/img/gradution.jpg" alt="Graduação em Sistemas de Informação">
+                <!-- Conteúdo textual controlado dinamicamente via functions.js (suporte a múltiplos idiomas) -->
+                <h3 id="cert2-title"></h3>
+                <div id="cert2-org"></div>
+                <div class="certification-links">
+                  <a href="https://consultadiploma.estacio.br/diploma/163.163.cbd6cc781fc9" target="_blank"><i class="fas fa-external-link-alt"></i> <span id="credential-label">Credencial</span></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Seção de Habilidades Técnicas com animação de rolagem -->
+          <section id="skills-section" class="animate-on-scroll">
+            <!-- Título da seção "Habilidades Técnicas" -->
+            <h2 id="skills-title">Habilidades Técnicas</h2>
+            <!-- Contêiner para as categorias de habilidades -->
+            <div class="skills-container">
+              <!-- Categoria de habilidade: Suporte -->
+              <div class="skill-category">
+                <h3 id="support-analysis-title">Analista de Suporte</h3>
+                <ul class="skill-list">
+                  <li id="remote-support-skill">Suporte Remoto(Remote Desktop , AnyDesk)</li>
+                  <li id="customer-service-skill">Atendimento ao Cliente</li>
+                  <li id="itsm-skill">Sistemas ITSM(Sysaid)</li>
+                  <li id="vmware-skill">VMware</li>
+                </ul>
+              </div>
+              
+              <!-- Categoria de habilidade: Análise de Dados -->
+              <div class="skill-category">
+                <h3 id="data-analysis-title">Análise de Dados</h3>
+                <ul class="skill-list">
+                  <li id="sql-skill">SQL (BigQuery, MySQL)</li>
+                  <li id="bi-skill">Power BI e Looker Studio</li>
+                  <li id="excel-skill">Excel</li>
+                  <li id="data-modeling-skill">Modelagem de Dados</li>
+                </ul>
+              </div>
+              
+              <!-- Categoria de habilidade: Desenvolvimento -->
+              <div class="skill-category">
+                <h3 id="dev-title">Desenvolvimento</h3>
+                <ul class="skill-list">
+                  <li id="html-css-skill">HTML/CSS</li>
+                  <li id="js-skill">JavaScript Básico</li>
+                  <li id="css-skill">CSS</li>
+                  <li id="git-skill">Git/GitHub</li>
+                </ul>
+              </div>
+              
+              <!-- Categoria de habilidade: Azure -->
+              <div class="skill-category">
+                <h3 id="azure-title">Azure</h3>
+                <ul class="skill-list">
+                  <li id="azure-ad-skill">Azure AD / Microsoft Entra ID</li>
+                  <li id="iam-skill">Gestão de Identidades e Acessos (IAM)</li>
+                  <li id="user-management-skill">Gestão de usuários e grupos no Azure AD</li>
+                  <li id="security-skill">Segurança em ambientes Microsoft 365</li>
+                  <li id="access-control-skill">Controle de acessos lógicos</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Seção de Projetos  com animação de rolagem -->
+          <section id="projects-section" class="animate-on-scroll">
+            <!-- Título da seção "Projetos " -->
+            <h2 id="projects-title">Projetos </h2>
+            <!-- Contêiner para os cartões de projeto -->
+            <div class="projects-container">
+              <!-- Cartão de projeto individual -->
+              <div class="project-card">
+                <!-- Imagem do projeto -->
+                <img src="assets/img/weather_dasboard.jpg" alt="Dashboard de Previsão do Tempo">
+                <!-- Título do projeto -->
+                <h3 id="project1-title">Weather App – Azure Static Web Apps</h3>
+                <!-- Descrição do projeto -->
+                <p id="project1-desc">Aplicação web estática desenvolvida com HTML, CSS e JavaScript,
+                    publicada em produção no Azure Static Web Apps (Free Tier),
+                    com deploy automatizado via GitHub Actions e integração
+                    com API pública de clima.</p>
+                <!-- Links relacionados ao projeto (ex: código, visualização) -->
+                <div class="project-links">
+                    <a href="https://github.com/JulioCesarSantosdv/weather-app-azure"
+                       target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span id="code-portfolio">Portifólio</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1yku84z2bWfo5F66nTLX4IGxXk0eL_H3m/view?usp=sharing"
+                       target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> <span id="doc-label">Documentação</span>
+                    </a>
+                    <a href="https://docs.google.com/presentation/d/1jW7k0UCjh_-cXHonSCdAEbh6c1gY13rI/edit?usp=sharing&ouid=102381973584263615945&rtpof=true&sd=true"
+                       target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> <span id="doc-slide">Apresentação</span>
+                    </a>
+                    <a href="https://gray-desert-0a443930f.2.azurestaticapps.net"
+                       target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> <span id="doc-view">Visualização</span>
+                    </a>
+                </div>
+            </div>
+              
+              <!-- Segundo cartão de projeto individual -->
+              <div class="project-card">
+                <img src="assets/img/under_construction.jpg" alt="Under Construction">
+                <h3 id="project2-title"></h3>
+                <p id="project2-desc"></p>
+                <div class="project-links">
+                  <a href=""
+                       target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span id="code-portfolio">Portifólio</span>
+                    </a>
+                    <a href="#"
+                       target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> <span id="doc-label">Documentação</span>
+                    </a>
+                    <a href="#"
+                       target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> <span id="doc-slide">Apresentação</span>
+                    </a>
+                    <a href="#"
+                       target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> <span id="doc-view">Visualização</span>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Seção de Contato com animação de rolagem -->
+          <section id="contact-section" class="animate-on-scroll">
+            <!-- Título da seção "Entre em Contato" -->
+            <h2 id="contact-title"></h2>
+            
+            <!-- Contêiner para informações de contato e mapa -->
+            <div class="contact-container">
+              <!-- Informações de contato -->
+              <div class="contact-info">
+                <div>
+                  <h3 id="contact-info-title"></h3>
+                  <p id="contact-info-desc"></p>
+                </div>
+                <div>
+                  <h4 id="contact-email-title"></h4>
+                  <!-- Link de e-mail com ícone -->
+                  <a href="mailto:jc-santos-2@hotmail.com" class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span>jc-santos-2@hotmail.com</span>
+                  </a>
+                </div>
+                <div>
+                  <h4 id="contact-phone-title"></h4>
+                  <!-- Link de telefone com ícone -->
+                  <a
+                    href="https://wa.me/5521986389398"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-item"
+                    >
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <span>+55 (21) 21986389398</span>
+                  </a>
+                </div>
+                <div>
+                  <h4>Localização</h4>
+                  <!-- Informação de localização com ícone -->
+                  <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>Rio de Janeiro, Brasil</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- MAPA DE LOCALIZAÇÃO -->
+              <div class="map-container">
+                <!-- Marcador no mapa -->
+                <div class="map-marker" title="Minha localização no Rio de Janeiro"></div>
+                <!-- Iframe para incorporar o mapa do OpenStreetMap -->
+ <iframe
+            width="100%"
+            height="400"
+            frameborder="0"
+            scrolling="no"
+            loading="lazy"
+            title="Mapa - Bangu, Rio de Janeiro"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-43.5200%2C-22.9200%2C-43.4100%2C-22.8200&layer=mapnik&marker=-22.8729%2C-43.4653">
+        </iframe>
+                <br/>
+                <small>
+                  <!-- Link para ver o mapa ampliado -->
+                  <a href="https://www.openstreetmap.org/?mlat=-22.9068&mlon=-43.1729#map=12/-22.9068/-43.1729" target="_blank" rel="noopener noreferrer">
+                    Ver mapa ampliado
+                  </a>
+                </small>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Rodapé da página -->
+    <footer>
+      <!-- Conteúdo do rodapé -->
+      <div class="footer-content">
+        <!-- Informação de copyright e ano atual -->
+        <div>© <span id="current-year"></span> Julio Cesar Santos da Silva</div>
+        <!-- Informação de formação acadêmica -->
+        <div>Graduado em Sistemas de Informação - Universidade Estácio de Sá</div>
+        <!-- Links de redes sociais no rodapé -->
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/juliocesarsantos/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/JulioCesarSantosdv" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="mailto:jc-santos-2@hotmail.com">
+            <i class="fas fa-envelope"></i> Contato
+          </a>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Botão "Voltar ao Topo" -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19V5"></path>
+        <path d="M5 12l7-7 7 7"></path>
+      </svg>
+    </button>
+
+ <!-- Main JS File -->
+  <!-- Importa o arquivo JavaScript principal da aplicação -->
+  <script src="assets/js/main.js"></script>
+  <!-- Functins JS File -->
+  <!-- Importa o arquivo JavaScript de funções auxiliares -->
+  <script src="assets/js/functions.js"></script>
+</body>
+</html>

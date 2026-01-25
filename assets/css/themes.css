@@ -1,0 +1,114 @@
+/* ================================
+   DARK MODE - BASE
+================================ */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+}
+
+/* ================================
+   DARK MODE - CARDS E BLOCOS
+================================ */
+body.dark-mode .skill-category,
+body.dark-mode .project-card,
+body.dark-mode .certification-card,
+body.dark-mode .experience-card,
+body.dark-mode .top-navbar,
+body.dark-mode .nav-menu,
+body.dark-mode footer,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form,
+body.dark-mode .map-container small {
+  background-color: var(--card-dark);
+}
+
+/* ================================
+   DARK MODE - TÍTULOS
+================================ */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: var(--secondary);
+}
+
+/* ================================
+   DARK MODE - LINKS
+================================ */
+body.dark-mode .contact-links a,
+body.dark-mode .footer-links a,
+body.dark-mode .project-links a,
+body.dark-mode .contact-item {
+  color: var(--secondary);
+}
+
+/* ================================
+   DARK MODE - FORMULÁRIO
+================================ */
+body.dark-mode .form-input,
+body.dark-mode .form-textarea {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+  border-color: var(--border-dark);
+}
+
+/* ================================
+   DARK MODE - CERTIFICAÇÕES
+================================ */
+body.dark-mode .certification-card img {
+  background: var(--card-dark);
+}
+
+/* ================================
+   DARK MODE - EXPERIÊNCIA
+================================ */
+body.dark-mode .experience-date {
+  color: var(--muted);
+}
+
+/* ================================
+   DARK MODE - NAVBAR
+================================ */
+.dark-mode .top-navbar {
+  background: var(--card-dark);
+}
+
+/* ================================
+   DARK MODE - BOTÃO VOLTAR AO TOPO
+================================ */
+.dark-mode .back-to-top {
+  background-color: var(--secondary);
+}
+
+.dark-mode .back-to-top:hover {
+  background-color: var(--primary);
+}
+
+/* ================================
+   DARK MODE - TOGGLE
+================================ */
+.dark-mode .theme-toggle {
+  color: var(--secondary);
+  border-color: var(--border-dark);
+}
+
+.dark-mode .theme-toggle:hover {
+  background-color: var(--secondary);
+  color: #000;
+}
+
+.theme-icon.sun {
+  display: none;
+}
+
+.dark-mode .theme-icon.sun {
+  display: block;
+}
+
+.dark-mode .theme-icon.moon {
+  display: none;
+}
