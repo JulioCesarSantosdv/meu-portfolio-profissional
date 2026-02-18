@@ -67,13 +67,13 @@ const translations = {
         
         // Projetos
         projectsTitle: "Projetos",
-        project1Title: "Weather App – Azure Static Web Apps",
-        project1Desc: "Aplicação web estática desenvolvida com HTML, CSS e JavaScript, implantada em produção no Azure Static Web Apps (Free Tier), com CI/CD automatizado via GitHub Actions e integração com uma API pública de dados climáticos.",
-        project2Title: "Análise de Dados com Power BI",
-        project2Desc: "Dashboard interativo desenvolvido no Power BI para análise de vendas, com métricas de desempenho, previsões e insights de negócio. Projeto completo com ETL e modelagem de dados.",
-        project3Title: "SQL Analytics – BigQuery",
-        project3Desc: "Conjunto de consultas SQL avançadas no Google BigQuery para análise de grandes volumes de dados, incluindo otimização de queries, joins complexos e criação de views materializadas.",
-        project4Title: "Migração para Azure",
+        project1Title: "Weather App – CI/CD Multi-Environment com Azure DevOps",
+        project1Desc: "Aplicação web de previsão do tempo com pipeline de CI/CD automatizado no Azure DevOps, incluindo ambientes de Teste, QA e Produção.",
+        project2Title: "SQL Analytics – BigQuery",
+        project2Desc: "Conjunto de consultas SQL avançadas no Google BigQuery para análise de grandes volumes de dados, incluindo otimização de queries, joins complexos e criação de views materializadas.",
+        project3Title: "Migração para Azure",
+        project3Desc: "Projeto de migração de infraestrutura on-premises para Microsoft Azure, incluindo planejamento, execução e validação pós-migração de servidores e bancos de dados.",
+        project4Title: "Migração para Azure (Cópia)",
         project4Desc: "Projeto de migração de infraestrutura on-premises para Microsoft Azure, incluindo planejamento, execução e validação pós-migração de servidores e bancos de dados.",
         codePortfolio: "Portifólio",
         docLabel: "Documentação",
@@ -150,13 +150,13 @@ const translations = {
         
         // Projects
         projectsTitle: "Projects",
-        project1Title: "Weather App – Azure Static Web Apps",
-        project1Desc: "Static web application built with HTML, CSS, and JavaScript, deployed to production on Azure Static Web Apps (Free Tier), with automated CI/CD via GitHub Actions and integration with a public weather API.",
-        project2Title: "Data Analysis with Power BI",
-        project2Desc: "Interactive dashboard developed in Power BI for sales analysis, with performance metrics, forecasts and business insights. Complete project with ETL and data modeling.",
-        project3Title: "SQL Analytics – BigQuery",
-        project3Desc: "Set of advanced SQL queries in Google BigQuery for large-scale data analysis, including query optimization, complex joins and creation of materialized views.",
-        project4Title: "Azure Migration",
+        project1Title: "Weather App – CI/CD Multi-Environment with Azure DevOps",
+        project1Desc: "Weather web application with automated CI/CD pipeline in Azure DevOps, including Test, QA and Production environments.",
+        project2Title: "SQL Analytics – BigQuery",
+        project2Desc: "Set of advanced SQL queries in Google BigQuery for large-scale data analysis, including query optimization, complex joins and creation of materialized views.",
+        project3Title: "Azure Migration",
+        project3Desc: "Infrastructure migration project from on-premises to Microsoft Azure, including planning, execution and post-migration validation of servers and databases.",
+        project4Title: "Azure Migration (Copy)",
         project4Desc: "Infrastructure migration project from on-premises to Microsoft Azure, including planning, execution and post-migration validation of servers and databases.",
         codePortfolio: "Portfolio",
         docLabel: "Documentation",
@@ -233,13 +233,13 @@ const translations = {
         
         // Proyectos
         projectsTitle: "Proyectos",
-        project1Title: "Weather App – Azure Static Web Apps",
-        project1Desc: "Aplicación web estática desarrollada con HTML, CSS y JavaScript, publicada en producción en Azure Static Web Apps (nivel gratuito), con implementación automatizada a través de GitHub Actions e integración con una API meteorológica pública",
-        project2Title: "Análisis de Datos con Power BI",
-        project2Desc: "Panel interactivo desarrollado en Power BI para análisis de ventas, con métricas de rendimiento, pronósticos y conocimientos de negocio. Proyecto completo con ETL y modelado de datos.",
-        project3Title: "SQL Analytics – BigQuery",
-        project3Desc: "Conjunto de consultas SQL avanzadas en Google BigQuery para análisis de grandes volúmenes de datos, incluyendo optimización de consultas, joins complejos y creación de vistas materializadas.",
-        project4Title: "Migración a Azure",
+        project1Title: "Weather App – CI/CD Multi-Environment con Azure DevOps",
+        project1Desc: "Aplicación web meteorológica con pipeline de CI/CD automatizado en Azure DevOps, incluyendo entornos de Prueba, QA y Producción.",
+        project2Title: "SQL Analytics – BigQuery",
+        project2Desc: "Conjunto de consultas SQL avanzadas en Google BigQuery para análisis de grandes volúmenes de datos, incluyendo optimización de consultas, joins complejos y creación de vistas materializadas.",
+        project3Title: "Migración a Azure",
+        project3Desc: "Proyecto de migración de infraestructura on-premises a Microsoft Azure, incluyendo planificación, ejecución y validación post-migración de servidores y bases de datos.",
+        project4Title: "Migración a Azure (Copia)",
         project4Desc: "Proyecto de migración de infraestructura on-premises a Microsoft Azure, incluyendo planificación, ejecución y validación post-migración de servidores y bases de datos.",
         codePortfolio: "Portafolio",
         docLabel: "Documentación",
@@ -303,7 +303,7 @@ function changeLanguage(lang) {
     document.getElementById('security-skill').textContent = translations[lang].securitySkill;
     document.getElementById('access-control-skill').textContent = translations[lang].accessControlSkill;
     
-    // === ATUALIZAÇÃO DA SEÇÃO DE PROJETOS ===
+    // === ATUALIZAÇÃO DA SEÇÃO DE PROJETOS (CORRIGIDO) ===
     document.getElementById('projects-title').textContent = translations[lang].projectsTitle;
     document.getElementById('project1-title').textContent = translations[lang].project1Title;
     document.getElementById('project1-desc').textContent = translations[lang].project1Desc;

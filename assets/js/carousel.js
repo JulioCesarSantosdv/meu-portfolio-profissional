@@ -1,6 +1,6 @@
 /**
  * carousel.js
- * Funcionalidade de carrossel para a seção de projetos
+ * Carrossel horizontal para projetos com navegação por setas e scroll
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,105 +9,132 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initCarousel() {
     const track = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.querySelector('.prev-btn');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
     const nextBtn = document.querySelector('.next-btn');
-    const indicators = document.querySelectorAll('.indicator');
+    const prevBtn = document.querySelector('.prev-btn');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    const viewport = document.querySelector('.carousel-viewport');
     
-    if (!track || !slides.length || !prevBtn || !nextBtn) return;
+    if (!track || !slides.length || !nextBtn || !prevBtn) return;
     
     let currentIndex = 0;
-    const slideCount = slides.length;
+    
+    // Função para calcular quantos slides são visíveis por vez
+    function getSlidesPerView() {
+        if (window.innerWidth >= 1200) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+    }
     
     // Função para atualizar a posição do carrossel
     function updateCarousel() {
-        const slideWidth = slides[0].offsetWidth;
+        const slideWidth = slides[0].getBoundingClientRect().width;
         track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        updateIndicators();
+    }
+    
+    // Criar indicadores (bolinhas)
+    function createIndicators() {
+        if (!indicatorsContainer) return;
         
-        // Atualizar indicadores
-        indicators.forEach((indicator, index) => {
-            if (index === currentIndex) {
-                indicator.classList.add('active');
+        indicatorsContainer.innerHTML = '';
+        const slidesPerView = getSlidesPerView();
+        const indicatorCount = Math.max(1, slides.length - slidesPerView + 1);
+        
+        for (let i = 0; i < indicatorCount; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('indicator');
+            if (i === 0) dot.classList.add('active');
+            
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                updateCarousel();
+            });
+            
+            indicatorsContainer.appendChild(dot);
+        }
+    }
+    
+    // Atualizar indicadores ativos
+    function updateIndicators() {
+        const dots = document.querySelectorAll('.indicator');
+        dots.forEach((dot, i) => {
+            if (i === currentIndex) {
+                dot.classList.add('active');
             } else {
-                indicator.classList.remove('active');
+                dot.classList.remove('active');
             }
         });
     }
     
     // Event listener para botão próximo
     nextBtn.addEventListener('click', () => {
-        if (currentIndex < slideCount - 1) {
+        const slidesPerView = getSlidesPerView();
+        const maxIndex = Math.max(0, slides.length - slidesPerView);
+        
+        if (currentIndex < maxIndex) {
             currentIndex++;
+            updateCarousel();
         } else {
-            currentIndex = 0; // Volta ao primeiro slide
+            // Opcional: voltar ao início (loop)
+            currentIndex = 0;
+            updateCarousel();
         }
-        updateCarousel();
     });
     
     // Event listener para botão anterior
     prevBtn.addEventListener('click', () => {
+        const slidesPerView = getSlidesPerView();
+        const maxIndex = Math.max(0, slides.length - slidesPerView);
+        
         if (currentIndex > 0) {
             currentIndex--;
-        } else {
-            currentIndex = slideCount - 1; // Vai para o último slide
-        }
-        updateCarousel();
-    });
-    
-    // Event listeners para indicadores
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            currentIndex = index;
             updateCarousel();
-        });
+        } else {
+            // Opcional: ir para o final (loop)
+            currentIndex = maxIndex;
+            updateCarousel();
+        }
     });
     
-    // Atualizar carrossel quando a janela for redimensionada
+    // Suporte a scroll horizontal
+    if (viewport) {
+        viewport.addEventListener('wheel', (e) => {
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+                e.preventDefault();
+                
+                const slidesPerView = getSlidesPerView();
+                const maxIndex = Math.max(0, slides.length - slidesPerView);
+                
+                if (e.deltaX > 0 && currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateCarousel();
+                } else if (e.deltaX < 0 && currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            }
+        }, { passive: false });
+    }
+    
+    // Recriar indicadores ao redimensionar
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            updateCarousel();
-        }, 250);
-    });
-    
-    // Inicializar carrossel
-    updateCarousel();
-    
-    // Suporte a teclado (setas esquerda/direita)
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevBtn.click();
-        } else if (e.key === 'ArrowRight') {
-            nextBtn.click();
-        }
-    });
-    
-    // Suporte a swipe em dispositivos móveis
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    track.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    
-    track.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, { passive: true });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartX - touchEndX;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                // Swipe esquerda -> próximo
-                nextBtn.click();
-            } else {
-                // Swipe direita -> anterior
-                prevBtn.click();
+            const slidesPerView = getSlidesPerView();
+            const maxIndex = Math.max(0, slides.length - slidesPerView);
+            
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
             }
-        }
-    }
+            
+            createIndicators();
+            updateCarousel();
+        }, 150);
+    });
+    
+    // Inicializar
+    createIndicators();
+    updateCarousel();
 }

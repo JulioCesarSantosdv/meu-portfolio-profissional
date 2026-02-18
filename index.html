@@ -29,11 +29,11 @@
     <link href="assets/vendor/animate.min.css" rel="stylesheet">
     
     <!-- Título da página exibido na aba do navegador -->
-    <title>Julio Cesar |  IT Support Analyst</title>
+    <title>Julio Cesar | IT Support Analyst</title>
 
- <!-- Main CSS File -->
-  <!-- Importa o arquivo CSS principal da aplicação -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <!-- Importa o arquivo CSS principal da aplicação -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 <body>
@@ -221,114 +221,112 @@
             </div>
           </section>
           
-          <!-- Seção de Projetos com animação de rolagem -->
+          <!-- Seção de Projetos com animação de rolagem - VERSÃO BANNER ROTATIVO CORRIGIDA -->
           <section id="projects-section" class="animate-on-scroll">
             <!-- Título da seção "Projetos" -->
             <h2 id="projects-title">Projetos</h2>
-            <!-- Contêiner para os cartões de projeto -->
-            <div class="projects-container">          
-              <!-- Cartão de projeto individual - Projeto 1 (Weather App – CI/CD Multi-Environment com Azure DevOps) -->
-              <div class="project-card">
-                <div class="video-container">
-                  <video controls width="100%">
-                    <source src="assets/videos/Clima Consultado.mp4" type="video/mp4">
-                    Seu navegador não suporta o elemento de vídeo.
-                  </video>
+            
+            <!-- Carrossel de Projetos - Estrutura Correta -->
+            <div class="projects-carousel">
+                <!-- Botão Anterior -->
+                <button class="carousel-btn prev-btn" aria-label="Projeto anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Viewport do carrossel (área visível) -->
+                <div class="carousel-viewport">
+                    <!-- Track que contém os slides -->
+                    <div class="carousel-track">
+                        <!-- Projeto 1 -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="video-container">
+                                    <video controls width="100%">
+                                        <source src="assets/videos/Clima Consultado.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+                                </div>
+                                <h3 id="project1-title">Weather App – CI/CD Multi-Environment com Azure DevOps</h3>
+                                <p id="project1-desc">Aplicação web de previsão do tempo com pipeline de CI/CD automatizado no Azure DevOps, incluindo ambientes de Teste, QA e Produção.</p>
+                                <div class="project-links">
+                                    <a href="https://www.notion.so/Pipeline-CI-CD-no-Azure-Weather-App-30336cafd1fc80ee9a6bc59bdd0b1863?source=copy_link" target="_blank"><i class="fas fa-file-alt"></i> Documentação</a>
+                                    <a href="https://github.com/JulioCesarSantosdv/azure-ci-cd-weather" target="_blank"><i class="fab fa-github"></i> Portifólio</a>
+                                    <a href="https://github.com/JulioCesarSantosdv/weather-app-azure/blob/main/azure-pipelines-cd.yml" target="_blank"><i class="fas fa-gears"></i> Código CD</a>
+                                    <a href="https://github.com/JulioCesarSantosdv/weather-app-azure/blob/main/azure-pipelines.yml" target="_blank"><i class="fas fa-gears"></i> Código CI</a>
+                                    <a href="#" target="_blank"><i class="fas fa-desktop"></i> Apresentação</a>
+                                    <a href="https://gray-desert-0a443930f.2.azurestaticapps.net/" target="_blank"><i class="fas fa-eye"></i> Visualização</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Projeto 2 -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="video-container">
+                                    <video controls width="100%">
+                                        <source src="assets/videos/sql-analytics.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+                                </div>
+                                <h3 id="project2-title">SQL Analytics – BigQuery</h3>
+                                <p id="project2-desc">Conjunto de consultas SQL avançadas no Google BigQuery para análise de grandes volumes de dados, incluindo otimização de queries, joins complexos e criação de views materializadas.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/JulioCesarSantosdv/sql-analytics" target="_blank"><i class="fab fa-github"></i> Código</a>
+                                    <a href="#" target="_blank"><i class="fas fa-file-alt"></i> Documentação</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Projeto 3 -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="video-container">
+                                    <video controls width="100%">
+                                        <source src="assets/videos/azure-migration.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+                                </div>
+                                <h3 id="project3-title">Migração para Azure</h3>
+                                <p id="project3-desc">Projeto de migração de infraestrutura on-premises para Microsoft Azure, incluindo planejamento, execução e validação pós-migração de servidores e bancos de dados.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/JulioCesarSantosdv/azure-migration" target="_blank"><i class="fab fa-github"></i> Código</a>
+                                    <a href="#" target="_blank"><i class="fas fa-file-alt"></i> Documentação</a>
+                                    <a href="#" target="_blank"><i class="fas fa-desktop"></i> Apresentação</a>
+                                    <a href="#" target="_blank"><i class="fas fa-eye"></i> Visualização</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Projeto 4 -->
+                        <div class="carousel-slide">
+                            <div class="project-card">
+                                <div class="video-container">
+                                    <video controls width="100%">
+                                        <source src="assets/videos/azure-migration.mp4" type="video/mp4">
+                                        Seu navegador não suporta o elemento de vídeo.
+                                    </video>
+                                </div>
+                                <h3 id="project4-title">Outro Projeto Azure</h3>
+                                <p id="project4-desc">Segundo projeto de migração de infraestrutura on-premises para Microsoft Azure, com foco em alta disponibilidade e disaster recovery.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/JulioCesarSantosdv/azure-migration" target="_blank"><i class="fab fa-github"></i> Código</a>
+                                    <a href="#" target="_blank"><i class="fas fa-file-alt"></i> Documentação</a>
+                                    <a href="#" target="_blank"><i class="fas fa-desktop"></i> Apresentação</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3 id="project2-title">Weather App – CI/CD Multi-Environment com Azure DevOps</h3>
-                <p id="project2-desc">Aplicação web de previsão do tempo com pipeline de CI/CD automatizado no Azure DevOps, incluindo ambientes de Teste, QA e Produção.</p>
-                <div class="project-links">
-                  <a href="https://www.notion.so/Pipeline-CI-CD-no-Azure-Weather-App-30336cafd1fc80ee9a6bc59bdd0b1863?source=copy_link"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> <span>Documentação</span>
-                  </a>
-                  <a href="https://github.com/JulioCesarSantosdv/azure-ci-cd-weather"
-                     target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span>Portifólio</span>
-                  </a>
-                  <a href="https://github.com/JulioCesarSantosdv/weather-app-azure/blob/main/azure-pipelines-cd.yml"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-gears"></i> <span>Código CD</span>
-                  </a>
-                  <a href="https://github.com/JulioCesarSantosdv/weather-app-azure/blob/main/azure-pipelines.yml"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-gears"></i> <span>Código CI</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> <span>Apresentação</span>
-                  </a>
-                  <a href="https://gray-desert-0a443930f.2.azurestaticapps.net/"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> <span>Visualização</span>
-                  </a>
+                
+                <!-- Botão Próximo -->
+                <button class="carousel-btn next-btn" aria-label="Próximo projeto">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Indicadores do carrossel -->
+                <div class="carousel-indicators">
+                    <!-- Serão preenchidos pelo JavaScript -->
                 </div>
-              </div>
-              
-              <!-- Cartão de projeto individual - Projeto 3 (SQL Analytics) -->
-              <div class="project-card">
-                <div class="video-container">
-                  <video controls width="100%">
-                    <source src="assets/videos/sql-analytics.mp4" type="video/mp4">
-                    Seu navegador não suporta o elemento de vídeo.
-                  </video>
-                </div>
-                <h3 id="project3-title">SQL Analytics – BigQuery</h3>
-                <p id="project3-desc">Conjunto de consultas SQL avançadas no Google BigQuery para análise de grandes volumes de dados, incluindo otimização de queries, joins complexos e criação de views materializadas.</p>
-                <div class="project-links">
-                  <a href="https://github.com/JulioCesarSantosdv/sql-analytics"
-                     target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span>Código</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> <span>Documentação</span>
-                  </a>
-                </div>
-              </div>
-              <!-- Cartão de projeto individual - Projeto 4 (Migração Azure) -->
-              <div class="project-card">
-                <div class="video-container">
-                  <video controls width="100%">
-                    <source src="assets/videos/azure-migration.mp4" type="video/mp4">
-                    Seu navegador não suporta o elemento de vídeo.
-                  </video>
-                </div>
-                <h3 id="project4-title">Migração para Azure</h3>
-                <p id="project4-desc">Projeto de migração de infraestrutura on-premises para Microsoft Azure, incluindo planejamento, execução e validação pós-migração de servidores e bancos de dados.</p>
-                <div class="project-links">
-                  <a href="https://github.com/JulioCesarSantosdv/azure-migration"
-                     target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span>Código</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> <span>Documentação</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> <span>Apresentação</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> <span>Visualização</span>
-                  </a>
-                </div>
-              </div>
-                <!-- Cartão de projeto individual - Projeto 4 (Migração Azure) -->
-              <div class="project-card">
-                <div class="video-container">
-                  <video controls width="100%">
-                    <source src="assets/videos/azure-migration.mp4" type="video/mp4">
-                    Seu navegador não suporta o elemento de vídeo.
-                  </video>
-                </div>
-                <h3 id="project4-title">Migração para Azure</h3>
-                <p id="project4-desc">Projeto de migração de infraestrutura on-premises para Microsoft Azure, incluindo planejamento, execução e validação pós-migração de servidores e bancos de dados.</p>
-                <div class="project-links">
-                  <a href="https://github.com/JulioCesarSantosdv/azure-migration"
-                     target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> <span>Código</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> <span>Documentação</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-desktop"></i> <span>Apresentação</span>
-                  </a>
-                  <a href="#"
-                     target="_blank" rel="noopener noreferrer"><i class="fas fa-eye"></i> <span>Visualização</span>
-                  </a>
-                </div>
-              </div>
-            </div>
             </div>
           </section>
           
@@ -388,15 +386,15 @@
                 <!-- Marcador no mapa -->
                 <div class="map-marker" title="Minha localização no Rio de Janeiro"></div>
                 <!-- Iframe para incorporar o mapa do OpenStreetMap -->
- <iframe
-            width="100%"
-            height="400"
-            frameborder="0"
-            scrolling="no"
-            loading="lazy"
-            title="Mapa - Bangu, Rio de Janeiro"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=-43.5200%2C-22.9200%2C-43.4100%2C-22.8200&layer=mapnik&marker=-22.8729%2C-43.4653">
-        </iframe>
+                <iframe
+                    width="100%"
+                    height="400"
+                    frameborder="0"
+                    scrolling="no"
+                    loading="lazy"
+                    title="Mapa - Bangu, Rio de Janeiro"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-43.5200%2C-22.9200%2C-43.4100%2C-22.8200&layer=mapnik&marker=-22.8729%2C-43.4653">
+                </iframe>
                 <br/>
                 <small>
                   <!-- Link para ver o mapa ampliado -->
@@ -442,11 +440,14 @@
       </svg>
     </button>
 
- <!-- Main JS File -->
-  <!-- Importa o arquivo JavaScript principal da aplicação -->
-  <script src="assets/js/main.js"></script>
-  <!-- Functins JS File -->
-  <!-- Importa o arquivo JavaScript de funções auxiliares -->
-  <script src="assets/js/functions.js"></script>
+    <!-- Main JS File -->
+    <!-- Importa o arquivo JavaScript principal da aplicação -->
+    <script src="assets/js/main.js"></script>
+    <!-- Functions JS File -->
+    <!-- Importa o arquivo JavaScript de funções auxiliares -->
+    <script src="assets/js/functions.js"></script>
+    <!-- Carousel JS File -->
+    <!-- Importa o arquivo JavaScript do carrossel -->
+    <script src="assets/js/carousel.js"></script>
 </body>
 </html>
