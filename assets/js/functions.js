@@ -50,8 +50,6 @@ const translations = {
         // Habilidades
         skillsTitle: "Habilidades Técnicas",
         supportAnalysisTitle: "Analista de Suporte",
-        dataAnalysisTitle: "Análise de Dados",
-        devTitle: "Desenvolvimento",
         azureTitle: "Azure",
         
         // Habilidades de Suporte
@@ -59,18 +57,6 @@ const translations = {
         customerServiceSkill: "Atendimento ao Cliente",
         itsmSkill: "Sistemas ITSM (Sysaid)",
         vmwareSkill: "VMware",
-        
-        // Habilidades de Análise de Dados
-        sqlSkill: "SQL (BigQuery, MySQL)",
-        biSkill: "Power BI e Looker Studio",
-        excelSkill: "Excel",
-        dataModelingSkill: "Modelagem de Dados",
-        
-        // Habilidades de Desenvolvimento
-        htmlCssSkill: "HTML/CSS",
-        jsSkill: "JavaScript Básico",
-        cssSkill: "CSS",
-        gitSkill: "Git/GitHub",
         
         // Habilidades de Azure
         azureAdSkill: "Azure AD / Microsoft Entra ID",
@@ -83,8 +69,12 @@ const translations = {
         projectsTitle: "Projetos",
         project1Title: "Weather App – Azure Static Web Apps",
         project1Desc: "Aplicação web estática desenvolvida com HTML, CSS e JavaScript, implantada em produção no Azure Static Web Apps (Free Tier), com CI/CD automatizado via GitHub Actions e integração com uma API pública de dados climáticos.",
-        project2Title: "Em Breve um Projeto Aqui",
-        project2Desc: "Em breve um novo projeto será adicionado aqui.",
+        project2Title: "Análise de Dados com Power BI",
+        project2Desc: "Dashboard interativo desenvolvido no Power BI para análise de vendas, com métricas de desempenho, previsões e insights de negócio. Projeto completo com ETL e modelagem de dados.",
+        project3Title: "SQL Analytics – BigQuery",
+        project3Desc: "Conjunto de consultas SQL avançadas no Google BigQuery para análise de grandes volumes de dados, incluindo otimização de queries, joins complexos e criação de views materializadas.",
+        project4Title: "Migração para Azure",
+        project4Desc: "Projeto de migração de infraestrutura on-premises para Microsoft Azure, incluindo planejamento, execução e validação pós-migração de servidores e bancos de dados.",
         codePortfolio: "Portifólio",
         docLabel: "Documentação",
         docSlide: "Apresentação",
@@ -143,8 +133,6 @@ const translations = {
         // Skills
         skillsTitle: "Technical Skills",
         supportAnalysisTitle: "Support Analyst",
-        dataAnalysisTitle: "Data Analysis", 
-        devTitle: "Development",
         azureTitle: "Azure",
         
         // Support Skills
@@ -152,18 +140,6 @@ const translations = {
         customerServiceSkill: "Customer Service",
         itsmSkill: "ITSM Systems (Sysaid)",
         vmwareSkill: "VMware",
-        
-        // Data Analysis Skills
-        sqlSkill: "SQL (BigQuery, MySQL)",
-        biSkill: "Power BI and Looker Studio",
-        excelSkill: "Excel",
-        dataModelingSkill: "Data Modeling",
-        
-        // Development Skills
-        htmlCssSkill: "HTML/CSS",
-        jsSkill: "Basic JavaScript",
-        cssSkill: "CSS",
-        gitSkill: "Git/GitHub",
         
         // Azure Skills
         azureAdSkill: "Azure AD / Microsoft Entra ID",
@@ -176,13 +152,17 @@ const translations = {
         projectsTitle: "Projects",
         project1Title: "Weather App – Azure Static Web Apps",
         project1Desc: "Static web application built with HTML, CSS, and JavaScript, deployed to production on Azure Static Web Apps (Free Tier), with automated CI/CD via GitHub Actions and integration with a public weather API.",
-        project2Title: "Coming Soon.",
-        project2Desc: "A new project will be added shortly here.",
+        project2Title: "Data Analysis with Power BI",
+        project2Desc: "Interactive dashboard developed in Power BI for sales analysis, with performance metrics, forecasts and business insights. Complete project with ETL and data modeling.",
+        project3Title: "SQL Analytics – BigQuery",
+        project3Desc: "Set of advanced SQL queries in Google BigQuery for large-scale data analysis, including query optimization, complex joins and creation of materialized views.",
+        project4Title: "Azure Migration",
+        project4Desc: "Infrastructure migration project from on-premises to Microsoft Azure, including planning, execution and post-migration validation of servers and databases.",
         codePortfolio: "Portfolio",
         docLabel: "Documentation",
         docSlide: "Presentation",
         docView: "Visualization",
-        
+        credentialLabel: "Credential",
         
         // Contact
         contactTitle: "Contact Me",
@@ -236,8 +216,6 @@ const translations = {
         // Habilidades
         skillsTitle: "Habilidades Técnicas",
         supportAnalysisTitle: "Analista de Soporte",
-        dataAnalysisTitle: "Análisis de Datos",
-        devTitle: "Desarrollo",
         azureTitle: "Azure",
         
         // Habilidades de Soporte
@@ -245,18 +223,6 @@ const translations = {
         customerServiceSkill: "Atención al Cliente",
         itsmSkill: "Sistemas ITSM (Sysaid)",
         vmwareSkill: "VMware",
-        
-        // Habilidades de Análisis de Datos
-        sqlSkill: "SQL (BigQuery, MySQL)",
-        biSkill: "Power BI y Looker Studio",
-        excelSkill: "Excel",
-        dataModelingSkill: "Modelado de Datos",
-        
-        // Habilidades de Desarrollo
-        htmlCssSkill: "HTML/CSS",
-        jsSkill: "JavaScript Básico",
-        cssSkill: "CSS",
-        gitSkill: "Git/GitHub",
         
         // Habilidades de Azure
         azureAdSkill: "Azure AD / Microsoft Entra ID",
@@ -269,13 +235,17 @@ const translations = {
         projectsTitle: "Proyectos",
         project1Title: "Weather App – Azure Static Web Apps",
         project1Desc: "Aplicación web estática desarrollada con HTML, CSS y JavaScript, publicada en producción en Azure Static Web Apps (nivel gratuito), con implementación automatizada a través de GitHub Actions e integración con una API meteorológica pública",
-        project2Title: "Próximamente.",
-        project2Desc: "Un nuevo proyecto será añadido pronto.",
+        project2Title: "Análisis de Datos con Power BI",
+        project2Desc: "Panel interactivo desarrollado en Power BI para análisis de ventas, con métricas de rendimiento, pronósticos y conocimientos de negocio. Proyecto completo con ETL y modelado de datos.",
+        project3Title: "SQL Analytics – BigQuery",
+        project3Desc: "Conjunto de consultas SQL avanzadas en Google BigQuery para análisis de grandes volúmenes de datos, incluyendo optimización de consultas, joins complejos y creación de vistas materializadas.",
+        project4Title: "Migración a Azure",
+        project4Desc: "Proyecto de migración de infraestructura on-premises a Microsoft Azure, incluyendo planificación, ejecución y validación post-migración de servidores y bases de datos.",
         codePortfolio: "Portafolio",
         docLabel: "Documentación",
         docSlide: "Presentación",
         docView: "Visualización",
-
+        credentialLabel: "Credencial",
 
         // Contacto
         contactTitle: "Contáctame",
@@ -293,8 +263,6 @@ function changeLanguage(lang) {
     document.getElementById('job-title').textContent = translations[lang].jobTitle;
     document.getElementById('linkedin-label').textContent = translations[lang].linkedinLabel;
     document.getElementById('github-label').textContent = translations[lang].githubLabel;
-    //document.getElementById('email-label').textContent = translations[lang].emailLabel;
-    //document.getElementById('cv-label').textContent = translations[lang].cvLabel;
     document.getElementById('about-title').textContent = translations[lang].aboutTitle;
     document.getElementById('about-text-1').textContent = translations[lang].aboutText1;
     document.getElementById('about-text-2').textContent = translations[lang].aboutText2;
@@ -320,8 +288,6 @@ function changeLanguage(lang) {
     
     // Títulos das categorias
     document.getElementById('support-analysis-title').textContent = translations[lang].supportAnalysisTitle;
-    document.getElementById('data-analysis-title').textContent = translations[lang].dataAnalysisTitle;
-    document.getElementById('dev-title').textContent = translations[lang].devTitle;
     document.getElementById('azure-title').textContent = translations[lang].azureTitle;
     
     // Habilidades de Suporte
@@ -330,18 +296,6 @@ function changeLanguage(lang) {
     document.getElementById('itsm-skill').textContent = translations[lang].itsmSkill;
     document.getElementById('vmware-skill').textContent = translations[lang].vmwareSkill;
     
-    // Habilidades de Análise de Dados
-    document.getElementById('sql-skill').textContent = translations[lang].sqlSkill;
-    document.getElementById('bi-skill').textContent = translations[lang].biSkill;
-    document.getElementById('excel-skill').textContent = translations[lang].excelSkill;
-    document.getElementById('data-modeling-skill').textContent = translations[lang].dataModelingSkill;
-    
-    // Habilidades de Desenvolvimento
-    document.getElementById('html-css-skill').textContent = translations[lang].htmlCssSkill;
-    document.getElementById('js-skill').textContent = translations[lang].jsSkill;
-    document.getElementById('css-skill').textContent = translations[lang].cssSkill;
-    document.getElementById('git-skill').textContent = translations[lang].gitSkill;
-    
     // Habilidades de Azure
     document.getElementById('azure-ad-skill').textContent = translations[lang].azureAdSkill;
     document.getElementById('iam-skill').textContent = translations[lang].iamSkill;
@@ -349,16 +303,32 @@ function changeLanguage(lang) {
     document.getElementById('security-skill').textContent = translations[lang].securitySkill;
     document.getElementById('access-control-skill').textContent = translations[lang].accessControlSkill;
     
+    // === ATUALIZAÇÃO DA SEÇÃO DE PROJETOS ===
     document.getElementById('projects-title').textContent = translations[lang].projectsTitle;
     document.getElementById('project1-title').textContent = translations[lang].project1Title;
     document.getElementById('project1-desc').textContent = translations[lang].project1Desc;
     document.getElementById('project2-title').textContent = translations[lang].project2Title;
     document.getElementById('project2-desc').textContent = translations[lang].project2Desc;
-    document.getElementById('code-portfolio').textContent = translations[lang].codePortfolio;
-    document.getElementById('doc-label').textContent = translations[lang].docLabel;
-    document.getElementById('doc-slide').textContent = translations[lang].docSlide;
-    document.getElementById('doc-view').textContent = translations[lang].docView;
-    document.getElementById('credential-label').textContent = translations[lang].credentialLabel;
+    document.getElementById('project3-title').textContent = translations[lang].project3Title;
+    document.getElementById('project3-desc').textContent = translations[lang].project3Desc;
+    document.getElementById('project4-title').textContent = translations[lang].project4Title;
+    document.getElementById('project4-desc').textContent = translations[lang].project4Desc;
+    
+    // Atualiza labels comuns dos projetos
+    const codePortfolioElements = document.querySelectorAll('#code-portfolio');
+    codePortfolioElements.forEach(el => el.textContent = translations[lang].codePortfolio);
+    
+    const docLabelElements = document.querySelectorAll('#doc-label');
+    docLabelElements.forEach(el => el.textContent = translations[lang].docLabel);
+    
+    const docSlideElements = document.querySelectorAll('#doc-slide');
+    docSlideElements.forEach(el => el.textContent = translations[lang].docSlide);
+    
+    const docViewElements = document.querySelectorAll('#doc-view');
+    docViewElements.forEach(el => el.textContent = translations[lang].docView);
+    
+    const credentialLabelElements = document.querySelectorAll('#credential-label');
+    credentialLabelElements.forEach(el => el.textContent = translations[lang].credentialLabel);
     
     // === ATUALIZAÇÃO DA SEÇÃO DE CONTATO ===
     document.getElementById('contact-title').textContent = translations[lang].contactTitle;
@@ -390,22 +360,6 @@ function changeLanguage(lang) {
         if (btn.dataset.lang === lang) {
             btn.classList.add('active');
         }
-    });
-    
-    // Atualiza os labels dos projetos
-    const codeLabels = document.querySelectorAll('#code-label');
-    codeLabels.forEach(label => {
-        label.textContent = translations[lang].codeLabel;
-    });
-    
-    const demoLabels = document.querySelectorAll('#demo-label');
-    demoLabels.forEach(label => {
-        label.textContent = translations[lang].demoLabel;
-    });
-    
-    const reportLabels = document.querySelectorAll('#report-label');
-    reportLabels.forEach(label => {
-        label.textContent = translations[lang].reportLabel;
     });
     
     // Atualiza o atributo lang do HTML

@@ -1,790 +1,831 @@
 /* Variáveis CSS para cores e fontes */
-      :root {
-        --primary: #2E86AB; /* Cor primária */
-        --secondary: #F18F01; /* Cor secundária/destaque */
-        --dark: #333333; /* Cor escura para texto */
-        --light: #f8f9fa; /* Cor clara para fundo */
-        --gray: #6c757d; /* Cor cinza */
-        --border: #e5e7eb; /* Cor para bordas */
-        
-        /* Variáveis para o modo escuro */
-        --bg-dark: #121212; /* Fundo no modo escuro */
-        --text-dark: #f8f9fa; /* Texto no modo escuro */
-        --card-dark: #1e1e1e; /* Cartões no modo escuro */
-        --border-dark: #374151; /* Bordas no modo escuro */
-      }
-      
-      /* Estilos para o modo escuro */
-      body.dark-mode {
-        background-color: var(--bg-dark); /* Fundo do corpo no modo escuro */
-        color: var(--text-dark); /* Cor do texto no modo escuro */
-      }
-      
-      .dark-mode {
-        background-color: var(--bg-dark); /* Fundo geral no modo escuro */
-      }
-      
-      /* Elementos com fundo no modo escuro */
-      body.dark-mode .skill-category,
-      body.dark-mode .project-card,
-      body.dark-mode .certification-card,
-      body.dark-mode .experience-card,
-      body.dark-mode .top-navbar,
-      body.dark-mode .nav-menu,
-      body.dark-mode footer,
-      body.dark-mode .contact-info,
-      body.dark-mode .contact-form,
-      body.dark-mode .map-container small {
-        background-color: var(--card-dark); /* Fundo dos cartões e outros elementos no modo escuro */
-      }
-      
-      /* Cores de títulos no modo escuro */
-      body.dark-mode h1,
-      body.dark-mode h2,
-      body.dark-mode h3,
-      body.dark-mode h4 {
-        color: var(--secondary); /* Cor secundária para títulos no modo escuro */
-      }
-      
-      /* Cores de links no modo escuro */
-      body.dark-mode .contact-links a,
-      body.dark-mode .footer-links a,
-      body.dark-mode .project-links a,
-      body.dark-mode .contact-item {
-        color: var(--secondary); /* Cor secundária para links no modo escuro */
-      }
-      
-      /* Estilos de formulário no modo escuro */
-      body.dark-mode .form-input,
-      body.dark-mode .form-textarea {
-        background-color: var(--card-dark); /* Fundo de inputs e textareas no modo escuro */
-        color: var(--text-dark); /* Cor do texto de inputs e textareas no modo escuro */
-        border-color: var(--border-dark); /* Cor da borda de inputs e textareas no modo escuro */
-      }
-      
-      /* Imagem de certificação no modo escuro */
-      body.dark-mode .certification-card img {
-        background: var(--card-dark); /* Fundo da imagem de certificação no modo escuro */
-      }
-      
-      /* Data de experiência no modo escuro */
-      body.dark-mode .experience-date {
-        color: var(--muted); /* Cor para a data de experiência no modo escuro */
-      }
-      
-      /* Estilos globais para HTML e Body */
-      html, body {
-        height: 100%; /* Altura total */
-        margin: 0; /* Margem zero */
-        padding: 0; /* Padding zero */
-        transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para cores de fundo e texto */
-      }
-      
-      body {
-        font-family: 'Roboto Mono', monospace; /* Fonte padrão */
-        background-color: var(--light); /* Cor de fundo padrão */
-        color: var(--dark); /* Cor do texto padrão */
-        line-height: 1.6; /* Altura da linha */
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-        min-height: 100vh; /* Altura mínima da viewport */
-        position: relative; /* Posição relativa */
-        padding-top: 70px; /* Padding superior para compensar a navbar fixa */
-      }
-      
-      /* Alternador de tema (botão) */
-      .theme-toggle-container {
-        display: flex; /* Layout flexbox */
-        align-items: center; /* Alinhamento vertical */
-        margin-left: auto; /* Margem esquerda automática para empurrar para a direita */
-      }
-      
-      .theme-toggle {
-        background: none; /* Sem fundo */
-        border: none; /* Sem borda */
-        cursor: pointer; /* Cursor de ponteiro */
-        padding: 0.5rem; /* Padding */
-        border-radius: 50%; /* Borda arredondada (círculo) */
-        display: flex; /* Layout flexbox */
-        align-items: center; /* Alinhamento vertical */
-        justify-content: center; /* Alinhamento horizontal */
-        color: var(--primary); /* Cor do ícone */
-        transition: all 0.3s; /* Transição suave */
-        margin-left: 1rem; /* Margem esquerda */
-      }
-      
-      .theme-toggle:hover {
-        background-color: rgba(0, 0, 0, 0.05); /* Fundo ao passar o mouse */
-      }
-      
-      .dark-mode .theme-toggle {
-        color: var(--secondary); /* Cor do ícone no modo escuro */
-      }
-      
-      .dark-mode .theme-toggle:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse no modo escuro */
-      }
-      
-      .theme-icon {
-        width: 1.25rem; /* Largura do ícone */
-        height: 1.25rem; /* Altura do ícone */
-      }
-      
-      .theme-icon.sun {
-        display: none; /* Esconde o ícone do sol por padrão */
-      }
-      
-      .dark-mode .theme-icon.sun {
-        display: block; /* Mostra o ícone do sol no modo escuro */
-      }
-      
-      .dark-mode .theme-icon.moon {
-        display: none; /* Esconde o ícone da lua no modo escuro */
-      }
-      
-      /* Navbar Fixa no Topo */
-      .top-navbar {
-        position: fixed; /* Posição fixa */
-        top: 0; /* Alinhado ao topo */
-        left: 0; /* Alinhado à esquerda */
-        right: 0; /* Alinhado à direita */
-        background: white; /* Fundo branco */
-        padding: 1rem 2rem; /* Padding */
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra */
-        z-index: 1000; /* Z-index alto para ficar acima de outros elementos */
-        display: flex; /* Layout flexbox */
-        justify-content: center; /* Centraliza o conteúdo horizontalmente */
-        align-items: center; /* Centraliza o conteúdo verticalmente */
-      }
-      
-      .dark-mode .top-navbar {
-        background: var(--card-dark); /* Fundo da navbar no modo escuro */
-      }
-      
-      .top-nav-menu {
-        display: flex; /* Layout flexbox */
-        gap: 1.5rem; /* Espaçamento entre os itens */
-        max-width: 1200px; /* Largura máxima */
-        width: 100%; /* Largura total */
-        justify-content: center; /* Centraliza os itens */
-      }
-      
-      .top-nav-btn {
-        background: none; /* Sem fundo */
-        border: none; /* Sem borda */
-        color: var(--primary); /* Cor do texto */
-        font-family: 'Roboto Mono', monospace; /* Fonte */
-        font-weight: 500; /* Peso da fonte */
-        padding: 0.5rem 1rem; /* Padding */
-        cursor: pointer; /* Cursor de ponteiro */
-        transition: all 0.3s ease; /* Transição suave */
-        font-size: 0.9rem; /* Tamanho da fonte */
-        position: relative; /* Posição relativa para o pseudo-elemento */
-      }
-      
-      .top-nav-btn:hover {
-        color: var(--secondary); /* Cor ao passar o mouse */
-      }
-      
-      .top-nav-btn.active {
-        color: var(--secondary); /* Cor quando ativo */
-      }
-      
-      .top-nav-btn.active:after {
-        content: ''; /* Conteúdo vazio para o pseudo-elemento */
-        position: absolute; /* Posição absoluta */
-        bottom: -3px; /* Alinhado abaixo */
-        left: 0; /* Alinhado à esquerda */
-        right: 0; /* Alinhado à direita */
-        height: 2px; /* Altura da linha */
-        background: var(--secondary); /* Cor da linha */
-      }
-      
-      /* Wrapper para o conteúdo principal */
-      .wrapper {
-        max-width: 1200px; /* Largura máxima */
-        width: 100%; /* Largura total */
-        margin: 2rem auto; /* Margem superior/inferior e centralizado horizontalmente */
-        padding: 2rem; /* Padding */
-        flex: 1; /* Ocupa o espaço restante no flex container */
-      }
-      
-      /* Contêiner geral */
-      .container {
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-        gap: 3rem; /* Espaçamento entre os itens */
-      }
-      
-      /* Cabeçalho */
-      header {
-        text-align: center; /* Alinhamento do texto ao centro */
-        margin-bottom: 2rem; /* Margem inferior */
-        position: relative; /* Posição relativa para o seletor de idioma */
-      }
-      
-      /* Seletor de idioma */
-      .language-switcher {
-        position: absolute; /* Posição absoluta */
-        top: 0; /* Alinhado ao topo */
-        right: 0; /* Alinhado à direita */
-        display: flex; /* Layout flexbox */
-        gap: 0.5rem; /* Espaçamento entre os botões */
-      }
-      
-      .language-btn {
-        background: none; /* Sem fundo */
-        border: 1px solid var(--primary); /* Borda */
-        color: var(--primary); /* Cor do texto */
-        padding: 0.3rem 0.6rem; /* Padding */
-        border-radius: 4px; /* Borda arredondada */
-        cursor: pointer; /* Cursor de ponteiro */
-        transition: all 0.3s ease; /* Transição suave */
-        font-size: 0.8rem; /* Tamanho da fonte */
-      }
-      
-      .language-btn:hover, .language-btn.active {
-        background: var(--primary); /* Fundo ao passar o mouse ou quando ativo */
-        color: white; /* Cor do texto ao passar o mouse ou quando ativo */
-      }
-      
-      /* Estilos para títulos */
-      h1, h2, h3 {
-        font-family: 'Mina', sans-serif; /* Fonte dos títulos */
-        color: var(--primary); /* Cor dos títulos */
-      }
-      
-      h1 {
-        font-size: 2.5rem; /* Tamanho da fonte do H1 */
-        margin-bottom: 0.5rem; /* Margem inferior */
-      }
-      
-      h2 {
-        border-bottom: 2px solid var(--secondary); /* Borda inferior */
-        padding-bottom: 0.5rem; /* Padding inferior */
-        margin-bottom: 1.5rem; /* Margem inferior */
-      }
-      
-      .subtitle {
-        font-size: 1.2rem; /* Tamanho da fonte do subtítulo */
-        color: var(--secondary); /* Cor do subtítulo */
-        font-weight: 600; /* Peso da fonte */
-        margin-bottom: 1.5rem; /* Margem inferior */
-      }
-      
-      /* Animações */
-      .animate-on-scroll {
-        opacity: 0; /* Opacidade inicial zero */
-        transform: translateY(20px); /* Translação inicial */
-        transition: opacity 0.6s ease, transform 0.6s ease; /* Transição suave */
-      }
-      
-      .animate-on-scroll.animated {
-        opacity: 1; /* Opacidade total quando animado */
-        transform: translateY(0); /* Volta à posição original quando animado */
-      }
-      
-      /* Seção Sobre Mim */
-      .about-section {
-        display: grid; /* Layout de grade */
-        grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
-        gap: 2rem; /* Espaçamento entre as colunas */
-        align-items: center; /* Alinhamento vertical dos itens */
-      }
-      
-      /* Imagem de perfil */
-      .profile-img {
-        width: 100%; /* Largura total */
-        max-width: 400px; /* Largura máxima */
-        border-radius: 8px; /* Borda arredondada */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
-        transition: transform 0.3s ease; /* Transição suave */
-      }
-      
-      .profile-img:hover {
-        transform: scale(1.02); /* Aumenta a escala ao passar o mouse */
-      }
-      
-      /* Contêineres de habilidades, projetos, certificações e experiência */
-      .skills-container, 
-      .projects-container,
-      .certifications-container,
-      .experience-container {
-        display: grid; /* Layout de grade */
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
-        gap: 1.5rem; /* Espaçamento entre os itens */
-        margin-top: 2rem; /* Margem superior */
-      }
-      
-      /* Estilos para categorias de habilidades, cartões de projeto, certificação e experiência */
-      .skill-category, 
-      .project-card,
-      .certification-card,
-      .experience-card {
-        background: white; /* Fundo branco */
-        padding: 1.5rem; /* Padding */
-        border-radius: 8px; /* Borda arredondada */
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-        border: 1px solid var(--border); /* Borda */
-      }
-      
-      /* Efeito hover para categorias de habilidades, cartões de projeto, certificação e experiência */
-      .skill-category:hover, 
-      .project-card:hover,
-      .certification-card:hover,
-      .experience-card:hover {
-        transform: translateY(-5px); /* Move para cima ao passar o mouse */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Aumenta a sombra ao passar o mouse */
-      }
-      
-      /* Estilos para títulos dentro de categorias de habilidades, cartões de projeto, certificação e experiência */
-      .skill-category h3, 
-      .project-card h3,
-      .certification-card h3,
-      .experience-card h3 {
-        margin-top: 0; /* Margem superior zero */
-        color: var(--secondary); /* Cor secundária */
-      }
-      
-      /* Lista de habilidades */
-      .skill-list {
-        list-style-type: none; /* Remove o estilo de lista padrão */
-        padding-left: 0; /* Remove o padding esquerdo */
-      }
-      
-      .skill-list li {
-        margin-bottom: 0.8rem; /* Margem inferior */
-        position: relative; /* Posição relativa para o pseudo-elemento */
-        padding-left: 1.8rem; /* Padding esquerdo para o ícone */
-      }
-      
-      .skill-list li:before {
-        content: "▹"; /* Adiciona um triângulo como marcador */
-        position: absolute; /* Posição absoluta */
-        left: 0; /* Alinhado à esquerda */
-        color: var(--primary); /* Cor do marcador */
-        font-size: 1.2rem; /* Tamanho da fonte do marcador */
-      }
-      
-      /* Links de contato */
-      .contact-links {
-        display: flex; /* Layout flexbox */
-        gap: 1.5rem; /* Espaçamento entre os links */
-        justify-content: center; /* Centraliza os links */
-        margin-top: 2rem; /* Margem superior */
-      }
-      
-      .contact-links a {
-        color: var(--primary); /* Cor do texto */
-        text-decoration: none; /* Sem sublinhado */
-        font-weight: 600; /* Peso da fonte */
-        transition: color 0.3s ease; /* Transição suave da cor */
-        display: flex; /* Layout flexbox */
-        align-items: center; /* Alinhamento vertical */
-        gap: 0.5rem; /* Espaçamento entre ícone e texto */
-      }
-      
-      .contact-links a:hover {
-        color: var(--secondary); /* Cor ao passar o mouse */
-      }
-      
-      /* Estilos para cartões de projeto, certificação e experiência */
-      .project-card,
-      .certification-card,
-      .experience-card {
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-      }
-      
-      .project-card img {
-        width: 100%; /* Largura total */
-        height: 180px; /* Altura fixa */
-        object-fit: cover; /* Ajuste da imagem */
-        border-radius: 6px; /* Borda arredondada */
-        margin-bottom: 1rem; /* Margem inferior */
-      }
-      
-      /* Links de projeto e certificação */
-      .project-links,
-      .certification-links {
-        margin-top: auto; /* Margem superior automática para empurrar para baixo */
-        display: flex; /* Layout flexbox */
-        gap: 1rem; /* Espaçamento entre os links */
-      }
-      
-      .project-links a,
-      .certification-links a {
-        color: var(--primary); /* Cor do texto */
-        text-decoration: none; /* Sem sublinhado */
-        font-size: 0.9rem; /* Tamanho da fonte */
-      }
-      
-      .project-links a:hover,
-      .certification-links a:hover {
-        text-decoration: underline; /* Sublinhado ao passar o mouse */
-      }
-      
-      /* Contêiner de contato */
-      .contact-container {
-        display: grid; /* Layout de grade */
-        grid-template-columns: 1fr; /* Uma coluna por padrão */
-        gap: 2rem; /* Espaçamento entre os itens */
-      }
-      
-      /* Media query para telas maiores que 768px */
-      @media (min-width: 768px) {
-        .contact-container {
-          grid-template-columns: 1fr 1fr; /* Duas colunas */
-        }
-      }
-      
-      /* Informações de contato */
-      .contact-info {
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-        gap: 1.5rem; /* Espaçamento entre os itens */
-        padding: 1.5rem; /* Padding */
-        border-radius: 8px; /* Borda arredondada */
-        border: 1px solid var(--border); /* Borda */
-        background-color: white; /* Fundo branco */
-      }
-      
-      /* Item de contato */
-      .contact-item {
-        display: flex; /* Layout flexbox */
-        align-items: center; /* Alinhamento vertical */
-        gap: 0.75rem; /* Espaçamento entre ícone e texto */
-        color: var(--dark); /* Cor do texto */
-        text-decoration: none; /* Sem sublinhado */
-        transition: color 0.3s; /* Transição suave da cor */
-      }
-      
-      .contact-item:hover {
-        color: var(--primary); /* Cor ao passar o mouse */
-      }
-      
-      /* Ícone de contato */
-      .contact-icon {
-        width: 1.25rem; /* Largura do ícone */
-        height: 1.25rem; /* Altura do ícone */
-      }
-      
-      /* Formulário de contato */
-      .contact-form {
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-        gap: 1rem; /* Espaçamento entre os itens */
-        padding: 1.5rem; /* Padding */
-        border-radius: 8px; /* Borda arredondada */
-        border: 1px solid var(--border); /* Borda */
-        background-color: white; /* Fundo branco */
-      }
-      
-      /* Grupo de formulário */
-      .form-group {
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-        gap: 0.5rem; /* Espaçamento entre os itens */
-      }
-      
-      /* Rótulo do formulário */
-      .form-label {
-        font-weight: 500; /* Peso da fonte */
-      }
-      
-      /* Inputs e textareas do formulário */
-      .form-input,
-      .form-textarea {
-        padding: 0.75rem; /* Padding */
-        border: 1px solid var(--border); /* Borda */
-        border-radius: 0.5rem; /* Borda arredondada */
-        background-color: white; /* Fundo branco */
-        color: var(--dark); /* Cor do texto */
-        transition: border-color 0.3s; /* Transição suave da cor da borda */
-        font-family: 'Roboto Mono', monospace; /* Fonte */
-      }
-      
-      /* Foco em inputs e textareas */
-      .form-input:focus,
-      .form-textarea:focus {
-        outline: none; /* Remove o contorno padrão */
-        border-color: var(--primary); /* Cor da borda ao focar */
-      }
-      
-      /* Textarea */
-      .form-textarea {
-        min-height: 150px; /* Altura mínima */
-        resize: vertical; /* Permite redimensionamento vertical */
-      }
-      
-      /* Botão de envio do formulário */
-      .submit-btn {
-        background-color: var(--primary); /* Fundo primário */
-        color: white; /* Cor do texto branca */
-        padding: 0.75rem 1.5rem; /* Padding */
-        border: none; /* Sem borda */
-        border-radius: 0.5rem; /* Borda arredondada */
-        font-weight: 500; /* Peso da fonte */
-        cursor: pointer; /* Cursor de ponteiro */
-        transition: background-color 0.3s; /* Transição suave do fundo */
-        font-family: 'Roboto Mono', monospace; /* Fonte */
-      }
-      
-      .submit-btn:hover {
-        background-color: var(--secondary); /* Fundo secundário ao passar o mouse */
-      }
-      
-      /* MAPA DE LOCALIZAÇÃO */
-      .map-container {
-        width: 100%; /* Largura total */
-        border-radius: 0.5rem; /* Borda arredondada */
-        border: 1px solid var(--border); /* Borda */
-        margin-top: 3rem; /* Margem superior */
-        overflow: hidden; /* Esconde o conteúdo que transborda */
-        position: relative; /* Posição relativa para o marcador */
-      }
-      
-      /* Marcador do mapa */
-      .map-marker {
-        position: absolute; /* Posição absoluta */
-        top: 50%; /* Alinhado ao centro verticalmente */
-        left: 50%; /* Alinhado ao centro horizontalmente */
-        transform: translate(-50%, -100%); /* Ajusta a posição para centralizar o marcador */
-        color: var(--primary); /* Cor do marcador */
-        font-size: 2rem; /* Tamanho da fonte do marcador */
-        z-index: 10; /* Z-index para ficar acima do mapa */
-      }
-      
-      /* Texto pequeno no contêiner do mapa */
-      .map-container small {
-        display: block; /* Exibição em bloco */
-        text-align: center; /* Alinhamento do texto ao centro */
-        padding: 0.5rem; /* Padding */
-        background-color: white; /* Fundo branco */
-        color: var(--dark); /* Cor do texto */
-      }
-      
-      /* Links no contêiner do mapa */
-      .map-container a {
-        color: var(--primary); /* Cor do texto */
-        text-decoration: none; /* Sem sublinhado */
-      }
-      
-      .map-container a:hover {
-        text-decoration: underline; /* Sublinhado ao passar o mouse */
-      }
-      
-      /* Rodapé */
-      footer {
-        padding: 2rem 0; /* Padding superior/inferior */
-        text-align: center; /* Alinhamento do texto ao centro */
-        border-top: 1px solid var(--border); /* Borda superior */
-        color: var(--gray); /* Cor do texto */
-        font-size: 0.9rem; /* Tamanho da fonte */
-        background-color: white; /* Fundo branco */
-        position: relative; /* Posição relativa */
-      }
-      
-      /* Conteúdo do rodapé */
-      .footer-content {
-        display: flex; /* Layout flexbox */
-        flex-direction: column; /* Direção da coluna flexbox */
-        gap: 0.5rem; /* Espaçamento entre os itens */
-        max-width: 1200px; /* Largura máxima */
-        margin: 0 auto; /* Centralizado horizontalmente */
-        padding: 0 2rem; /* Padding lateral */
-      }
-      
-      /* Links do rodapé */
-      .footer-links {
-        display: flex; /* Layout flexbox */
-        justify-content: center; /* Centraliza os links */
-        gap: 1.5rem; /* Espaçamento entre os links */
-        margin-top: 0.5rem; /* Margem superior */
-      }
-      
-      .footer-links a {
-        color: var(--primary); /* Cor do texto */
-        text-decoration: none; /* Sem sublinhado */
-        transition: color 0.3s ease; /* Transição suave da cor */
-      }
-      
-      .footer-links a:hover {
-        color: var(--secondary); /* Cor ao passar o mouse */
-        text-decoration: underline; /* Sublinhado ao passar o mouse */
-      }
-      
-      /* Adiciona padding extra para compensar o menu fixo */
-      section {
-        scroll-margin-top: 100px; /* Margem de rolagem superior */
-      }
-      
-      /* Certificações */
-      .certification-card img {
-        width: 95%; /* Largura da imagem */
-        height: 300px; /* Altura da imagem */
-        object-fit: contain; /* Ajuste da imagem */
-        margin-bottom: 1rem; /* Margem inferior */
-        background: white; /* Fundo branco */
-        padding: 1rem; /* Padding */
-        border-radius: 4px; /* Borda arredondada */
-      }
-      
-      /* Experiência */
-      .experience-date {
-        color: var(--gray); /* Cor do texto */
-        font-size: 0.9rem; /* Tamanho da fonte */
-        margin-bottom: 0.5rem; /* Margem inferior */
-      }
-      
-      .experience-description {
-        margin-top: 1rem; /* Margem superior */
-      }
-      
-      /* Botão "Voltar ao Topo" */
-      .back-to-top {
-        position: fixed; /* Posição fixa */
-        bottom: 2rem; /* Alinhado na parte inferior */
-        right: 2rem; /* Alinhado à direita */
-        background-color: var(--primary); /* Fundo primário */
-        color: white; /* Cor do texto branca */
-        width: 3rem; /* Largura */
-        height: 3rem; /* Altura */
-        border-radius: 50%; /* Borda arredondada (círculo) */
-        display: flex; /* Layout flexbox */
-        align-items: center; /* Alinhamento vertical */
-        justify-content: center; /* Alinhamento horizontal */
-        cursor: pointer; /* Cursor de ponteiro */
-        opacity: 0; /* Opacidade inicial zero */
-        visibility: hidden; /* Escondido por padrão */
-        transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease; /* Transição suave */
-        z-index: 1000; /* Z-index alto */
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra */
-      }
-      
-      .back-to-top.show {
-        opacity: 1; /* Opacidade total quando visível */
-        visibility: visible; /* Visível */
-      }
-      
-      .back-to-top:hover {
-        background-color: var(--secondary); /* Fundo secundário ao passar o mouse */
-      }
-      
-      .dark-mode .back-to-top {
-        background-color: var(--secondary); /* Fundo no modo escuro */
-      }
-      
-      .dark-mode .back-to-top:hover {
-        background-color: var(--primary); /* Fundo ao passar o mouse no modo escuro */
-      }
-      
-      .back-to-top svg {
-        width: 1.5rem; /* Largura do SVG */
-        height: 1.5rem; /* Altura do SVG */
-      }
-      
-      /* Media query para telas menores que 768px (dispositivos móveis) */
-      @media (max-width: 768px) {
-        body {
-          padding-top: 60px; /* Ajusta o padding superior do corpo */
-        }
-        
-        .top-navbar {
-          padding: 0.8rem 1rem; /* Ajusta o padding da navbar */
-        }
-        
-        .top-nav-menu {
-          justify-content: space-around; /* Espaçamento igual entre os itens */
-          gap: 0.5rem; /* Ajusta o espaçamento */
-        }
-        
-        .top-nav-btn {
-          padding: 0.5rem; /* Ajusta o padding do botão */
-          font-size: 0.8rem; /* Ajusta o tamanho da fonte */
-        }
-        
-        .wrapper {
-          margin: 1rem auto; /* Ajusta a margem do wrapper */
-          padding: 1rem; /* Ajusta o padding do wrapper */
-        }
-        
-        .about-section, 
-        .skills-container, 
-        .projects-container,
-        .certifications-container,
-        .experience-container {
-          grid-template-columns: 1fr; /* Uma coluna para todas as seções */
-        }
-        
-        .contact-container {
-          grid-template-columns: 1fr; /* Uma coluna para o contêiner de contato */
-        }
-        
-        h1 {
-          font-size: 2rem; /* Ajusta o tamanho da fonte do H1 */
-        }
-        
-        .contact-links, 
-        .footer-links {
-          flex-direction: column; /* Links em coluna */
-          align-items: center; /* Alinhamento central */
-          gap: 0.8rem; /* Ajusta o espaçamento */
-        }
-        
-        .language-switcher {
-          position: static; /* Posição estática */
-          justify-content: center; /* Centraliza o conteúdo */
-          margin-bottom: 1rem; /* Margem inferior */
-        }
-        
-        section {
-          scroll-margin-top: 80px; /* Ajusta a margem de rolagem */
-        }
-        
-        .back-to-top {
-          bottom: 1rem; /* Ajusta a posição inferior */
-          right: 1rem; /* Ajusta a posição direita */
-          width: 2.5rem; /* Ajusta a largura */
-          height: 2.5rem; /* Ajusta a altura */
-        }
-        
-        .back-to-top svg {
-          width: 1.25rem; /* Ajusta a largura do SVG */
-          height: 1.25rem; /* Ajusta a altura do SVG */
-        }
-      }
+:root {
+  --primary: #2E86AB; /* Cor primária */
+  --secondary: #F18F01; /* Cor secundária/destaque */
+  --dark: #333333; /* Cor escura para texto */
+  --light: #f8f9fa; /* Cor clara para fundo */
+  --gray: #6c757d; /* Cor cinza */
+  --border: #e5e7eb; /* Cor para bordas */
+  
+  /* Variáveis para o modo escuro */
+  --bg-dark: #121212; /* Fundo no modo escuro */
+  --text-dark: #f8f9fa; /* Texto no modo escuro */
+  --card-dark: #1e1e1e; /* Cartões no modo escuro */
+  --border-dark: #374151; /* Bordas no modo escuro */
+}
 
-      
-      /* Estilos adicionais para melhor responsividade */
-      @media (max-width: 480px) {
-        .top-nav-menu {
-          flex-wrap: wrap; /* Quebra de linha para os itens do menu */
-          justify-content: center; /* Centraliza os itens */
-        }
-        .top-nav-btn {
-          font-size: 0.7rem; /* Reduz o tamanho da fonte dos botões */
-          padding: 0.3rem 0.6rem; /* Reduz o padding dos botões */
-        }
-        h1 {
-          font-size: 1.8rem; /* Reduz o tamanho da fonte do H1 */
-        }
-        .subtitle {
-          font-size: 1rem; /* Reduz o tamanho da fonte do subtítulo */
-        }
-        .contact-links a, .footer-links a {
-          font-size: 0.8rem; /* Reduz o tamanho da fonte dos links de contato e rodapé */
-        }
-        .skill-list li {
-          font-size: 0.9rem; /* Reduz o tamanho da fonte da lista de habilidades */
-        }
-        .project-card p, .certification-card p, .experience-card p {
-          font-size: 0.9rem; /* Reduz o tamanho da fonte dos parágrafos nos cartões */
-        }
-        .map-container iframe {
-          height: 300px; /* Reduz a altura do iframe do mapa */
-        }
-      }
+/* Estilos para o modo escuro */
+body.dark-mode {
+  background-color: var(--bg-dark); /* Fundo do corpo no modo escuro */
+  color: var(--text-dark); /* Cor do texto no modo escuro */
+}
 
+.dark-mode {
+  background-color: var(--bg-dark); /* Fundo geral no modo escuro */
+}
 
+/* Elementos com fundo no modo escuro */
+body.dark-mode .skill-category,
+body.dark-mode .project-card,
+body.dark-mode .certification-card,
+body.dark-mode .experience-card,
+body.dark-mode .top-navbar,
+body.dark-mode .nav-menu,
+body.dark-mode footer,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form,
+body.dark-mode .map-container small {
+  background-color: var(--card-dark); /* Fundo dos cartões e outros elementos no modo escuro */
+}
+
+/* Cores de títulos no modo escuro */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: var(--secondary); /* Cor secundária para títulos no modo escuro */
+}
+
+/* Cores de links no modo escuro */
+body.dark-mode .contact-links a,
+body.dark-mode .footer-links a,
+body.dark-mode .project-links a,
+body.dark-mode .contact-item {
+  color: var(--secondary); /* Cor secundária para links no modo escuro */
+}
+
+/* Estilos de formulário no modo escuro */
+body.dark-mode .form-input,
+body.dark-mode .form-textarea {
+  background-color: var(--card-dark); /* Fundo de inputs e textareas no modo escuro */
+  color: var(--text-dark); /* Cor do texto de inputs e textareas no modo escuro */
+  border-color: var(--border-dark); /* Cor da borda de inputs e textareas no modo escuro */
+}
+
+/* Imagem de certificação no modo escuro */
+body.dark-mode .certification-card img {
+  background: var(--card-dark); /* Fundo da imagem de certificação no modo escuro */
+}
+
+/* Data de experiência no modo escuro */
+body.dark-mode .experience-date {
+  color: var(--gray); /* Cor para a data de experiência no modo escuro */
+}
+
+/* Estilos globais para HTML e Body */
+html, body {
+  height: 100%; /* Altura total */
+  margin: 0; /* Margem zero */
+  padding: 0; /* Padding zero */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para cores de fundo e texto */
+}
+
+body {
+  font-family: 'Roboto Mono', monospace; /* Fonte padrão */
+  background-color: var(--light); /* Cor de fundo padrão */
+  color: var(--dark); /* Cor do texto padrão */
+  line-height: 1.6; /* Altura da linha */
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+  min-height: 100vh; /* Altura mínima da viewport */
+  position: relative; /* Posição relativa */
+  padding-top: 70px; /* Padding superior para compensar a navbar fixa */
+}
+
+/* Alternador de tema (botão) */
+.theme-toggle-container {
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Alinhamento vertical */
+  margin-left: auto; /* Margem esquerda automática para empurrar para a direita */
+}
+
+.theme-toggle {
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Cursor de ponteiro */
+  padding: 0.5rem; /* Padding */
+  border-radius: 50%; /* Borda arredondada (círculo) */
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Alinhamento horizontal */
+  color: var(--primary); /* Cor do ícone */
+  transition: all 0.3s; /* Transição suave */
+  margin-left: 1rem; /* Margem esquerda */
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Fundo ao passar o mouse */
+}
+
+.dark-mode .theme-toggle {
+  color: var(--secondary); /* Cor do ícone no modo escuro */
+}
+
+.dark-mode .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse no modo escuro */
+}
+
+.theme-icon {
+  width: 1.25rem; /* Largura do ícone */
+  height: 1.25rem; /* Altura do ícone */
+}
+
+.theme-icon.sun {
+  display: none; /* Esconde o ícone do sol por padrão */
+}
+
+.dark-mode .theme-icon.sun {
+  display: block; /* Mostra o ícone do sol no modo escuro */
+}
+
+.dark-mode .theme-icon.moon {
+  display: none; /* Esconde o ícone da lua no modo escuro */
+}
+
+/* Navbar Fixa no Topo */
+.top-navbar {
+  position: fixed; /* Posição fixa */
+  top: 0; /* Alinhado ao topo */
+  left: 0; /* Alinhado à esquerda */
+  right: 0; /* Alinhado à direita */
+  background: white; /* Fundo branco */
+  padding: 1rem 2rem; /* Padding */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra */
+  z-index: 1000; /* Z-index alto para ficar acima de outros elementos */
+  display: flex; /* Layout flexbox */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.dark-mode .top-navbar {
+  background: var(--card-dark); /* Fundo da navbar no modo escuro */
+}
+
+.top-nav-menu {
+  display: flex; /* Layout flexbox */
+  gap: 1.5rem; /* Espaçamento entre os itens */
+  max-width: 1200px; /* Largura máxima */
+  width: 100%; /* Largura total */
+  justify-content: center; /* Centraliza os itens */
+}
+
+.top-nav-btn {
+  background: none; /* Sem fundo */
+  border: none; /* Sem borda */
+  color: var(--primary); /* Cor do texto */
+  font-family: 'Roboto Mono', monospace; /* Fonte */
+  font-weight: 500; /* Peso da fonte */
+  padding: 0.5rem 1rem; /* Padding */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: all 0.3s ease; /* Transição suave */
+  font-size: 0.9rem; /* Tamanho da fonte */
+  position: relative; /* Posição relativa para o pseudo-elemento */
+}
+
+.top-nav-btn:hover {
+  color: var(--secondary); /* Cor ao passar o mouse */
+}
+
+.top-nav-btn.active {
+  color: var(--secondary); /* Cor quando ativo */
+}
+
+.top-nav-btn.active:after {
+  content: ''; /* Conteúdo vazio para o pseudo-elemento */
+  position: absolute; /* Posição absoluta */
+  bottom: -3px; /* Alinhado abaixo */
+  left: 0; /* Alinhado à esquerda */
+  right: 0; /* Alinhado à direita */
+  height: 2px; /* Altura da linha */
+  background: var(--secondary); /* Cor da linha */
+}
+
+/* Wrapper para o conteúdo principal */
+.wrapper {
+  max-width: 1200px; /* Largura máxima */
+  width: 100%; /* Largura total */
+  margin: 2rem auto; /* Margem superior/inferior e centralizado horizontalmente */
+  padding: 2rem; /* Padding */
+  flex: 1; /* Ocupa o espaço restante no flex container */
+}
+
+/* Contêiner geral */
+.container {
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+  gap: 3rem; /* Espaçamento entre os itens */
+}
+
+/* Cabeçalho */
+header {
+  text-align: center; /* Alinhamento do texto ao centro */
+  margin-bottom: 2rem; /* Margem inferior */
+  position: relative; /* Posição relativa para o seletor de idioma */
+}
+
+/* Seletor de idioma */
+.language-switcher {
+  position: absolute; /* Posição absoluta */
+  top: 0; /* Alinhado ao topo */
+  right: 0; /* Alinhado à direita */
+  display: flex; /* Layout flexbox */
+  gap: 0.5rem; /* Espaçamento entre os botões */
+}
+
+.language-btn {
+  background: none; /* Sem fundo */
+  border: 1px solid var(--primary); /* Borda */
+  color: var(--primary); /* Cor do texto */
+  padding: 0.3rem 0.6rem; /* Padding */
+  border-radius: 4px; /* Borda arredondada */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: all 0.3s ease; /* Transição suave */
+  font-size: 0.8rem; /* Tamanho da fonte */
+}
+
+.language-btn:hover, .language-btn.active {
+  background: var(--primary); /* Fundo ao passar o mouse ou quando ativo */
+  color: white; /* Cor do texto ao passar o mouse ou quando ativo */
+}
+
+/* Estilos para títulos */
+h1, h2, h3 {
+  font-family: 'Mina', sans-serif; /* Fonte dos títulos */
+  color: var(--primary); /* Cor dos títulos */
+}
+
+h1 {
+  font-size: 2.5rem; /* Tamanho da fonte do H1 */
+  margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+h2 {
+  border-bottom: 2px solid var(--secondary); /* Borda inferior */
+  padding-bottom: 0.5rem; /* Padding inferior */
+  margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+.subtitle {
+  font-size: 1.2rem; /* Tamanho da fonte do subtítulo */
+  color: var(--secondary); /* Cor do subtítulo */
+  font-weight: 600; /* Peso da fonte */
+  margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+/* Animações */
+.animate-on-scroll {
+  opacity: 0; /* Opacidade inicial zero */
+  transform: translateY(20px); /* Translação inicial */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Transição suave */
+}
+
+.animate-on-scroll.animated {
+  opacity: 1; /* Opacidade total quando animado */
+  transform: translateY(0); /* Volta à posição original quando animado */
+}
+
+/* Seção Sobre Mim */
+.about-section {
+  display: grid; /* Layout de grade */
+  grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+  gap: 2rem; /* Espaçamento entre as colunas */
+  align-items: center; /* Alinhamento vertical dos itens */
+}
+
+/* Imagem de perfil */
+.profile-img {
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+.profile-img:hover {
+  transform: scale(1.02); /* Aumenta a escala ao passar o mouse */
+}
+
+/* Contêineres de habilidades, projetos, certificações e experiência */
+.skills-container, 
+.projects-container,
+.certifications-container,
+.experience-container {
+  display: grid; /* Layout de grade */
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas de tamanho igual */
+  gap: 1.5rem; /* Espaçamento entre os itens */
+  margin-top: 2rem; /* Margem superior */
+}
+
+/* Estilos para categorias de habilidades, cartões de projeto, certificação e experiência */
+.skill-category, 
+.project-card,
+.certification-card,
+.experience-card {
+  background: white; /* Fundo branco */
+  padding: 1.5rem; /* Padding */
+  border-radius: 8px; /* Borda arredondada */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  border: 1px solid var(--border); /* Borda */
+}
+
+/* Efeito hover para categorias de habilidades, cartões de projeto, certificação e experiência */
+.skill-category:hover, 
+.project-card:hover,
+.certification-card:hover,
+.experience-card:hover {
+  transform: translateY(-5px); /* Move para cima ao passar o mouse */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilos para títulos dentro de categorias de habilidades, cartões de projeto, certificação e experiência */
+.skill-category h3, 
+.project-card h3,
+.certification-card h3,
+.experience-card h3 {
+  margin-top: 0; /* Margem superior zero */
+  color: var(--secondary); /* Cor secundária */
+}
+
+/* Lista de habilidades */
+.skill-list {
+  list-style-type: none; /* Remove o estilo de lista padrão */
+  padding-left: 0; /* Remove o padding esquerdo */
+}
+
+.skill-list li {
+  margin-bottom: 0.8rem; /* Margem inferior */
+  position: relative; /* Posição relativa para o pseudo-elemento */
+  padding-left: 1.8rem; /* Padding esquerdo para o ícone */
+}
+
+.skill-list li:before {
+  content: "▹"; /* Adiciona um triângulo como marcador */
+  position: absolute; /* Posição absoluta */
+  left: 0; /* Alinhado à esquerda */
+  color: var(--primary); /* Cor do marcador */
+  font-size: 1.2rem; /* Tamanho da fonte do marcador */
+}
+
+/* Links de contato */
+.contact-links {
+  display: flex; /* Layout flexbox */
+  gap: 1.5rem; /* Espaçamento entre os links */
+  justify-content: center; /* Centraliza os links */
+  margin-top: 2rem; /* Margem superior */
+}
+
+.contact-links a {
+  color: var(--primary); /* Cor do texto */
+  text-decoration: none; /* Sem sublinhado */
+  font-weight: 600; /* Peso da fonte */
+  transition: color 0.3s ease; /* Transição suave da cor */
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Alinhamento vertical */
+  gap: 0.5rem; /* Espaçamento entre ícone e texto */
+}
+
+.contact-links a:hover {
+  color: var(--secondary); /* Cor ao passar o mouse */
+}
+
+/* Estilos para cartões de projeto, certificação e experiência */
+.project-card,
+.certification-card,
+.experience-card {
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+}
+
+.project-card img {
+  width: 100%; /* Largura total */
+  height: 180px; /* Altura fixa */
+  object-fit: cover; /* Ajuste da imagem */
+  border-radius: 6px; /* Borda arredondada */
+  margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* Links de projeto e certificação */
+.project-links,
+.certification-links {
+  margin-top: auto; /* Margem superior automática para empurrar para baixo */
+  display: flex; /* Layout flexbox */
+  gap: 1rem; /* Espaçamento entre os links */
+  flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+}
+
+.project-links a,
+.certification-links a {
+  color: var(--primary); /* Cor do texto */
+  text-decoration: none; /* Sem sublinhado */
+  font-size: 0.9rem; /* Tamanho da fonte */
+}
+
+.project-links a:hover,
+.certification-links a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Contêiner de contato */
+.contact-container {
+  display: grid; /* Layout de grade */
+  grid-template-columns: 1fr; /* Uma coluna por padrão */
+  gap: 2rem; /* Espaçamento entre os itens */
+}
+
+/* Media query para telas maiores que 768px */
+@media (min-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+  }
+}
+
+/* Informações de contato */
+.contact-info {
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+  gap: 1.5rem; /* Espaçamento entre os itens */
+  padding: 1.5rem; /* Padding */
+  border-radius: 8px; /* Borda arredondada */
+  border: 1px solid var(--border); /* Borda */
+  background-color: white; /* Fundo branco */
+}
+
+/* Item de contato */
+.contact-item {
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Alinhamento vertical */
+  gap: 0.75rem; /* Espaçamento entre ícone e texto */
+  color: var(--dark); /* Cor do texto */
+  text-decoration: none; /* Sem sublinhado */
+  transition: color 0.3s; /* Transição suave da cor */
+}
+
+.contact-item:hover {
+  color: var(--primary); /* Cor ao passar o mouse */
+}
+
+/* Ícone de contato */
+.contact-icon {
+  width: 1.25rem; /* Largura do ícone */
+  height: 1.25rem; /* Altura do ícone */
+}
+
+/* Formulário de contato */
+.contact-form {
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+  gap: 1rem; /* Espaçamento entre os itens */
+  padding: 1.5rem; /* Padding */
+  border-radius: 8px; /* Borda arredondada */
+  border: 1px solid var(--border); /* Borda */
+  background-color: white; /* Fundo branco */
+}
+
+/* Grupo de formulário */
+.form-group {
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+  gap: 0.5rem; /* Espaçamento entre os itens */
+}
+
+/* Rótulo do formulário */
+.form-label {
+  font-weight: 500; /* Peso da fonte */
+}
+
+/* Inputs e textareas do formulário */
+.form-input,
+.form-textarea {
+  padding: 0.75rem; /* Padding */
+  border: 1px solid var(--border); /* Borda */
+  border-radius: 0.5rem; /* Borda arredondada */
+  background-color: white; /* Fundo branco */
+  color: var(--dark); /* Cor do texto */
+  transition: border-color 0.3s; /* Transição suave da cor da borda */
+  font-family: 'Roboto Mono', monospace; /* Fonte */
+}
+
+/* Foco em inputs e textareas */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none; /* Remove o contorno padrão */
+  border-color: var(--primary); /* Cor da borda ao focar */
+}
+
+/* Textarea */
+.form-textarea {
+  min-height: 150px; /* Altura mínima */
+  resize: vertical; /* Permite redimensionamento vertical */
+}
+
+/* Botão de envio do formulário */
+.submit-btn {
+  background-color: var(--primary); /* Fundo primário */
+  color: white; /* Cor do texto branca */
+  padding: 0.75rem 1.5rem; /* Padding */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem; /* Borda arredondada */
+  font-weight: 500; /* Peso da fonte */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s; /* Transição suave do fundo */
+  font-family: 'Roboto Mono', monospace; /* Fonte */
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary); /* Fundo secundário ao passar o mouse */
+}
+
+/* MAPA DE LOCALIZAÇÃO */
+.map-container {
+  width: 100%; /* Largura total */
+  border-radius: 0.5rem; /* Borda arredondada */
+  border: 1px solid var(--border); /* Borda */
+  margin-top: 3rem; /* Margem superior */
+  overflow: hidden; /* Esconde o conteúdo que transborda */
+  position: relative; /* Posição relativa para o marcador */
+}
+
+/* Marcador do mapa */
+.map-marker {
+  position: absolute; /* Posição absoluta */
+  top: 50%; /* Alinhado ao centro verticalmente */
+  left: 50%; /* Alinhado ao centro horizontalmente */
+  transform: translate(-50%, -100%); /* Ajusta a posição para centralizar o marcador */
+  color: var(--primary); /* Cor do marcador */
+  font-size: 2rem; /* Tamanho da fonte do marcador */
+  z-index: 10; /* Z-index para ficar acima do mapa */
+}
+
+/* Texto pequeno no contêiner do mapa */
+.map-container small {
+  display: block; /* Exibição em bloco */
+  text-align: center; /* Alinhamento do texto ao centro */
+  padding: 0.5rem; /* Padding */
+  background-color: white; /* Fundo branco */
+  color: var(--dark); /* Cor do texto */
+}
+
+/* Links no contêiner do mapa */
+.map-container a {
+  color: var(--primary); /* Cor do texto */
+  text-decoration: none; /* Sem sublinhado */
+}
+
+.map-container a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  padding: 2rem 0; /* Padding superior/inferior */
+  text-align: center; /* Alinhamento do texto ao centro */
+  border-top: 1px solid var(--border); /* Borda superior */
+  color: var(--gray); /* Cor do texto */
+  font-size: 0.9rem; /* Tamanho da fonte */
+  background-color: white; /* Fundo branco */
+  position: relative; /* Posição relativa */
+}
+
+/* Conteúdo do rodapé */
+.footer-content {
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Direção da coluna flexbox */
+  gap: 0.5rem; /* Espaçamento entre os itens */
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centralizado horizontalmente */
+  padding: 0 2rem; /* Padding lateral */
+}
+
+/* Links do rodapé */
+.footer-links {
+  display: flex; /* Layout flexbox */
+  justify-content: center; /* Centraliza os links */
+  gap: 1.5rem; /* Espaçamento entre os links */
+  margin-top: 0.5rem; /* Margem superior */
+}
+
+.footer-links a {
+  color: var(--primary); /* Cor do texto */
+  text-decoration: none; /* Sem sublinhado */
+  transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.footer-links a:hover {
+  color: var(--secondary); /* Cor ao passar o mouse */
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Adiciona padding extra para compensar o menu fixo */
+section {
+  scroll-margin-top: 100px; /* Margem de rolagem superior */
+}
+
+/* Certificações */
+.certification-card img {
+  width: 95%; /* Largura da imagem */
+  height: 300px; /* Altura da imagem */
+  object-fit: contain; /* Ajuste da imagem */
+  margin-bottom: 1rem; /* Margem inferior */
+  background: white; /* Fundo branco */
+  padding: 1rem; /* Padding */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+/* Experiência */
+.experience-date {
+  color: var(--gray); /* Cor do texto */
+  font-size: 0.9rem; /* Tamanho da fonte */
+  margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+.experience-description {
+  margin-top: 1rem; /* Margem superior */
+}
+
+/* Botão "Voltar ao Topo" */
+.back-to-top {
+  position: fixed; /* Posição fixa */
+  bottom: 2rem; /* Alinhado na parte inferior */
+  right: 2rem; /* Alinhado à direita */
+  background-color: var(--primary); /* Fundo primário */
+  color: white; /* Cor do texto branca */
+  width: 3rem; /* Largura */
+  height: 3rem; /* Altura */
+  border-radius: 50%; /* Borda arredondada (círculo) */
+  display: flex; /* Layout flexbox */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Alinhamento horizontal */
+  cursor: pointer; /* Cursor de ponteiro */
+  opacity: 0; /* Opacidade inicial zero */
+  visibility: hidden; /* Escondido por padrão */
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease; /* Transição suave */
+  z-index: 1000; /* Z-index alto */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra */
+}
+
+.back-to-top.show {
+  opacity: 1; /* Opacidade total quando visível */
+  visibility: visible; /* Visível */
+}
+
+.back-to-top:hover {
+  background-color: var(--secondary); /* Fundo secundário ao passar o mouse */
+}
+
+.dark-mode .back-to-top {
+  background-color: var(--secondary); /* Fundo no modo escuro */
+}
+
+.dark-mode .back-to-top:hover {
+  background-color: var(--primary); /* Fundo ao passar o mouse no modo escuro */
+}
+
+.back-to-top svg {
+  width: 1.5rem; /* Largura do SVG */
+  height: 1.5rem; /* Altura do SVG */
+}
+
+/* Estilos para vídeos nos projetos */
+.video-container {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+/* Ajuste para manter 4 projetos por linha em telas grandes */
+@media (min-width: 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ajuste para telas médias */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Estilo para o botão de play do vídeo */
+.video-container video::-webkit-media-controls-play-button,
+.video-container video::-webkit-media-controls-start-playback-button {
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+/* Efeito hover nos vídeos */
+.video-container:hover video {
+  opacity: 0.9;
+}
+
+/* Media query para telas menores que 768px (dispositivos móveis) */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Ajusta o padding superior do corpo */
+  }
+  
+  .top-navbar {
+    padding: 0.8rem 1rem; /* Ajusta o padding da navbar */
+  }
+  
+  .top-nav-menu {
+    justify-content: space-around; /* Espaçamento igual entre os itens */
+    gap: 0.5rem; /* Ajusta o espaçamento */
+  }
+  
+  .top-nav-btn {
+    padding: 0.5rem; /* Ajusta o padding do botão */
+    font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+  }
+  
+  .wrapper {
+    margin: 1rem auto; /* Ajusta a margem do wrapper */
+    padding: 1rem; /* Ajusta o padding do wrapper */
+  }
+  
+  .about-section, 
+  .skills-container, 
+  .projects-container,
+  .certifications-container,
+  .experience-container {
+    grid-template-columns: 1fr; /* Uma coluna para todas as seções */
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr; /* Uma coluna para o contêiner de contato */
+  }
+  
+  h1 {
+    font-size: 2rem; /* Ajusta o tamanho da fonte do H1 */
+  }
+  
+  .contact-links, 
+  .footer-links {
+    flex-direction: column; /* Links em coluna */
+    align-items: center; /* Alinhamento central */
+    gap: 0.8rem; /* Ajusta o espaçamento */
+  }
+  
+  .language-switcher {
+    position: static; /* Posição estática */
+    justify-content: center; /* Centraliza o conteúdo */
+    margin-bottom: 1rem; /* Margem inferior */
+  }
+  
+  section {
+    scroll-margin-top: 80px; /* Ajusta a margem de rolagem */
+  }
+  
+  .back-to-top {
+    bottom: 1rem; /* Ajusta a posição inferior */
+    right: 1rem; /* Ajusta a posição direita */
+    width: 2.5rem; /* Ajusta a largura */
+    height: 2.5rem; /* Ajusta a altura */
+  }
+  
+  .back-to-top svg {
+    width: 1.25rem; /* Ajusta a largura do SVG */
+    height: 1.25rem; /* Ajusta a altura do SVG */
+  }
+}
+
+/* Estilos adicionais para melhor responsividade */
+@media (max-width: 480px) {
+  .top-nav-menu {
+    flex-wrap: wrap; /* Quebra de linha para os itens do menu */
+    justify-content: center; /* Centraliza os itens */
+  }
+  .top-nav-btn {
+    font-size: 0.7rem; /* Reduz o tamanho da fonte dos botões */
+    padding: 0.3rem 0.6rem; /* Reduz o padding dos botões */
+  }
+  h1 {
+    font-size: 1.8rem; /* Reduz o tamanho da fonte do H1 */
+  }
+  .subtitle {
+    font-size: 1rem; /* Reduz o tamanho da fonte do subtítulo */
+  }
+  .contact-links a, .footer-links a {
+    font-size: 0.8rem; /* Reduz o tamanho da fonte dos links de contato e rodapé */
+  }
+  .skill-list li {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte da lista de habilidades */
+  }
+  .project-card p, .certification-card p, .experience-card p {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos parágrafos nos cartões */
+  }
+  .map-container iframe {
+    height: 300px; /* Reduz a altura do iframe do mapa */
+  }
+}
