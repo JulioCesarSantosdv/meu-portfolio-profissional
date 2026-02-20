@@ -263,11 +263,8 @@ function changeLanguage(lang) {
     document.getElementById('job-title').textContent = translations[lang].jobTitle;
     document.getElementById('linkedin-label').textContent = translations[lang].linkedinLabel;
     document.getElementById('github-label').textContent = translations[lang].githubLabel;
-<<<<<<< HEAD
     //document.getElementById('email-label').textContent = translations[lang].emailLabel;
     //document.getElementById('cv-label').textContent = translations[lang].cvLabel;
-=======
->>>>>>> develop
     document.getElementById('about-title').textContent = translations[lang].aboutTitle;
     document.getElementById('about-text-1').textContent = translations[lang].aboutText1;
     document.getElementById('about-text-2').textContent = translations[lang].aboutText2;
