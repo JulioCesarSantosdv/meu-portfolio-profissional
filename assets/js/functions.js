@@ -24,10 +24,10 @@ const translations = {
         
         // Sobre Mim
         aboutTitle: "Sobre Mim",
-        aboutText1: "Graduado em Sistemas de Informação, com trajetória construída em Análise de Suporte e operações de TI, onde os dados sempre foram parte central do meu trabalho.",
-        aboutText2: "Utilizei informações de chamados, SLAs e métricas operacionais para análise de padrões, identificação de causas raiz e suporte à melhoria contínua dos processos, desenvolvendo uma mentalidade analítica orientada a resultados.",
-        aboutText3: "Atualmente, estou em evolução técnica contínua em Análise de Dados e Engenharia de Dados, aprofundando conhecimentos em SQL, Python e visualização, com foco em estruturar dados e gerar insights confiáveis para o negócio.",
-        aboutText4: "Tenho interesse em contextos onde dados, tecnologia e operação se integram para melhorar decisões, eficiência e performance organizacional.",
+        aboutText1: "Graduado em Sistemas de Informação, com experiência em Análise de Suporte e operações de TI, atuando no atendimento a usuários, troubleshooting e documentação de procedimentos.",
+        aboutText2: "Tenho direcionado minha evolução técnica para ambientes em nuvem e práticas de DevOps, desenvolvendo projetos com CI/CD, automação de pipelines, Infraestrutura como Código (Terraform em modo validado), containers e versionamento de código.",
+        aboutText3: "Possuo familiaridade com rotinas orientadas a incidentes, análise de logs, execução de deploys via pipeline e padronização de processos, sempre com foco em confiabilidade, rastreabilidade e melhoria contínua.",
+        aboutText4: "Busco oportunidades onde possa unir suporte técnico, operações em cloud e automação para contribuir com a estabilidade e eficiência dos ambientes.",
         
         // Experiência
         experienceTitle: "Experiência Profissional",
@@ -107,10 +107,10 @@ const translations = {
         
         // About Me
         aboutTitle: "About Me",
-        aboutText1: "Graduated in Information Systems, with a career built in Support Analysis and IT operations, where data has always been a central part of my work.",
-        aboutText2: "I used ticket information, SLAs and operational metrics for pattern analysis, root cause identification and support for continuous process improvement, developing a results-oriented analytical mindset.",
-        aboutText3: "Currently, I am in continuous technical evolution in Data Analysis and Data Engineering, deepening knowledge in SQL, Python and visualization, with a focus on structuring data and generating reliable insights for business.",
-        aboutText4: "I am interested in contexts where data, technology and operations integrate to improve decisions, efficiency and organizational performance.",
+        aboutText1: "Bachelor’s degree in Information Systems with experience in Technical Support and IT operations, working with user support, troubleshooting, and procedural documentation.",
+        aboutText2: "I am currently focusing my technical development on cloud environments and DevOps practices, building projects involving CI/CD pipelines, Infrastructure as Code (Terraform validation mode), container builds, and source control.",
+        aboutText3: "I am familiar with incident-driven routines, log analysis, pipeline-based deployments, and process standardization, always aiming for reliability, traceability, and continuous improvement.",
+        aboutText4: "I am seeking opportunities where I can combine technical support, cloud operations, and automation to enhance system stability and operational efficiency.",
         
         // Experience
         experienceTitle: "Professional Experience",
@@ -190,10 +190,10 @@ const translations = {
         
         // Sobre Mí
         aboutTitle: "Sobre Mí",
-        aboutText1: "Graduado en Sistemas de Información, con trayectoria construida en Análisis de Soporte y operaciones de TI, donde los datos siempre han sido parte central de mi trabajo.",
-        aboutText2: "Utilicé información de tickets, SLAs y métricas operativas para análisis de patrones, identificación de causas raíz y soporte a la mejora continua de procesos, desarrollando una mentalidad analítica orientada a resultados.",
-        aboutText3: "Actualmente, estoy en evolución técnica continua en Análisis de Datos e Ingeniería de Datos, profundizando conocimientos en SQL, Python y visualización, con foco en estructurar datos y generar insights confiables para el negocio.",
-        aboutText4: "Tengo interés en contextos donde datos, tecnología y operación se integran para mejorar decisiones, eficiencia y desempeño organizacional.",
+        aboutText1: "Graduado en Sistemas de Información con experiencia en Soporte Técnico y operaciones de TI, brindando atención a usuarios, troubleshooting y documentación de procedimientos.",
+        aboutText2: "Actualmente enfoco mi desarrollo técnico en entornos cloud y prácticas DevOps, creando proyectos con pipelines de CI/CD, Infraestructura como Código (Terraform en modo de validación), construcción de contenedores y control de versiones.",
+        aboutText3: "Tengo familiaridad con rutinas orientadas a incidentes, análisis de logs, ejecuciones de despliegue mediante pipelines y estandarización de procesos, siempre con enfoque en confiabilidad, trazabilidad y mejora continua.",
+        aboutText4: "Busco oportunidades donde pueda integrar soporte técnico, operaciones en la nube y automatización para contribuir a la estabilidad y eficiencia de los entornos.",
         
         // Experiencia
         experienceTitle: "Experiencia Profesional",
